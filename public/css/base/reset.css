@@ -1,0 +1,101 @@
+/**
+ * CSS Reset - Base styles for all templates
+ *
+ * This file provides a consistent baseline for all generated images.
+ * It resets browser defaults and ensures predictable rendering.
+ */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images and media */
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Remove button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Typography baseline */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Body defaults */
+body {
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+/* Hide empty elements */
+:empty:not(img):not(svg):not(input):not(textarea) {
+  display: none;
+}
+
+/* Styled chunks support - inline background support */
+span[style*="background-color"] {
+  display: inline;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* SVG color inheritance */
+svg {
+  fill: currentColor;
+}
+
+svg * {
+  fill: inherit;
+}
+
+/* Prevent text selection artifacts */
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Font loading state */
+body:not(.fonts-loaded) {
+  visibility: hidden;
+}
+
+body.fonts-loaded {
+  visibility: visible;
+}

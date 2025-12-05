@@ -1,0 +1,47 @@
+{
+  "carousel": {
+    "photos": [],
+    "copy": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "stack-img-bg",
+          "texto_1": "Texto normal 1",
+          "texto_2": "TEXTO PRINCIPAL com destaque",
+          "texto_3": "Texto normal 3",
+          "texto_principal": "texto_2"
+        },
+        {
+          "numero": 2,
+          "estilo": "stack-img",
+          "texto_1": "TEXTO PRINCIPAL sem destaque",
+          "texto_2": "Texto normal",
+          "texto_principal": "texto_1"
+        },
+        {
+          "numero": 3,
+          "estilo": "stack-img-bg",
+          "texto_1": "Teste 1",
+          "texto_2": "Teste 2",
+          "texto_3": "TEXTO PRINCIPAL no meio",
+          "texto_4": "Teste 4",
+          "texto_principal": "texto_3"
+        }
+      ]
+    },
+    "destaques": [
+      {
+        "numero": 1,
+        "destaques": {
+          "texto_2": [
+            {
+              "trecho": "com destaque",
+              "tipo": "bold",
+              "cor": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

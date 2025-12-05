@@ -1,0 +1,123 @@
+{
+  "name": "Versus - Comparação de Imagens",
+  "description": "Template para comparação lado a lado de duas imagens, com título, texto explicativo e 4 elementos de canto (tags ou SVGs) para branding. Ideal para posts de antes/depois, comparações de produtos ou transformações.",
+  "dimensions": {
+    "width": 1080,
+    "height": 1440
+  },
+  "placeholders": [
+    "viewportBackgroundType",
+    "viewportBackgroundColor",
+    "viewportBackgroundImage",
+    "containerPaddingTop",
+    "containerPaddingRight",
+    "containerPaddingBottom",
+    "containerPaddingLeft",
+    "contentGap",
+    "text1",
+    "text1Style",
+    "text1StyledChunks",
+    "text2",
+    "text2Style",
+    "text2StyledChunks",
+    "imageLeftUrl",
+    "imageRightUrl",
+    "imageGap",
+    "imageBorderRadius",
+    "corner1Type",
+    "corner1Text",
+    "corner1TextStyle",
+    "corner1SvgContent",
+    "corner1SvgUrl",
+    "corner1SvgColor",
+    "corner1SpecialPosition",
+    "corner1SpecialPadding",
+    "corner2Type",
+    "corner2Text",
+    "corner2TextStyle",
+    "corner2SvgContent",
+    "corner2SvgUrl",
+    "corner2SvgColor",
+    "corner2SpecialPosition",
+    "corner2SpecialPadding",
+    "corner3Type",
+    "corner3Text",
+    "corner3TextStyle",
+    "corner3SvgContent",
+    "corner3SvgUrl",
+    "corner3SvgColor",
+    "corner3SpecialPosition",
+    "corner3SpecialPadding",
+    "corner4Type",
+    "corner4Text",
+    "corner4TextStyle",
+    "corner4SvgContent",
+    "corner4SvgUrl",
+    "corner4SvgColor",
+    "corner4SpecialPosition",
+    "corner4SpecialPadding"
+  ],
+  "layout": {
+    "container": {
+      "padding": {
+        "top": 100,
+        "right": 80,
+        "bottom": 100,
+        "left": 80
+      }
+    },
+    "text1": {
+      "fontSize": 80,
+      "fontWeight": 900,
+      "color": "#333333",
+      "align": "center"
+    },
+    "text2": {
+      "fontSize": 60,
+      "fontWeight": 900,
+      "color": "#333333",
+      "align": "center"
+    },
+    "comparisonImages": {
+      "gap": 40,
+      "borderRadius": 0,
+      "layout": "side-by-side"
+    },
+    "corners": {
+      "type": "text",
+      "fontSize": 32,
+      "fontWeight": 900,
+      "color": "#000000",
+      "backgroundColor": "#ff00cc",
+      "padding": "5px 15px"
+    }
+  },
+  "styleOptions": {
+    "backgroundSupport": true,
+    "styledChunksSupport": true,
+    "svgSupport": true,
+    "customPositioning": true
+  },
+  "defaultValues": {
+    "viewportBackgroundType": "color",
+    "viewportBackgroundColor": "#FFFFFF",
+    "containerPaddingTop": 100,
+    "containerPaddingRight": 80,
+    "containerPaddingBottom": 100,
+    "containerPaddingLeft": 80,
+    "contentGap": 40,
+    "text1": "Título Comparação",
+    "text2": "Texto Explicativo",
+    "imageGap": 40,
+    "imageBorderRadius": 0,
+    "corner1Type": "text",
+    "corner1Text": "tag",
+    "corner2Type": "text",
+    "corner2Text": "tag",
+    "corner3Type": "text",
+    "corner3Text": "tag",
+    "corner4Type": "text",
+    "corner4Text": "tag"
+  },
+  "preview": null
+}

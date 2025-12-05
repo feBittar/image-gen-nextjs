@@ -1,0 +1,155 @@
+{
+  "name": "Stack - Textos + Imagem",
+  "description": "Template com card contendo até 5 campos de texto empilhados verticalmente, imagem de conteúdo opcional, 2 SVGs posicionáveis e 2 campos de texto livre para CTAs. Ideal para posts informativos com múltiplos níveis de texto e elementos visuais customizáveis.",
+  "dimensions": {
+    "width": 1080,
+    "height": 1440
+  },
+  "placeholders": [
+    "backgroundColor",
+    "cardWidth",
+    "cardHeight",
+    "cardBorderRadius",
+    "cardBackgroundColor",
+    "cardBackgroundImage",
+    "text1",
+    "text2",
+    "text3",
+    "text4",
+    "text5",
+    "text1Style",
+    "text2Style",
+    "text3Style",
+    "text4Style",
+    "text5Style",
+    "textGap",
+    "contentImageUrl",
+    "contentImageBorderRadius",
+    "svg1Content",
+    "svg2Content",
+    "svg1Top",
+    "svg1Left",
+    "svg1Width",
+    "svg1Height",
+    "svg2Top",
+    "svg2Left",
+    "svg2Width",
+    "svg2Height",
+    "freeText1",
+    "freeText2",
+    "freeText1Top",
+    "freeText1Left",
+    "freeText1Size",
+    "freeText1Color",
+    "freeText1BgColor",
+    "freeText2Top",
+    "freeText2Left",
+    "freeText2Size",
+    "freeText2Color",
+    "freeText2BgColor"
+  ],
+  "layout": {
+    "card": {
+      "width": 90,
+      "height": 90,
+      "borderRadius": 20,
+      "position": {
+        "x": "center",
+        "y": "center"
+      }
+    },
+    "text1": {
+      "fontSize": 68,
+      "fontWeight": 700,
+      "color": "#000000",
+      "align": "left"
+    },
+    "text2": {
+      "fontSize": 48,
+      "fontWeight": 600,
+      "color": "#000000",
+      "align": "left"
+    },
+    "text3": {
+      "fontSize": 32,
+      "fontWeight": 500,
+      "color": "#000000",
+      "align": "left"
+    },
+    "text4": {
+      "fontSize": 24,
+      "fontWeight": 400,
+      "color": "#000000",
+      "align": "left"
+    },
+    "text5": {
+      "fontSize": 20,
+      "fontWeight": 400,
+      "color": "#000000",
+      "align": "left"
+    },
+    "contentImage": {
+      "borderRadius": 12,
+      "position": {
+        "x": "center",
+        "y": "below-texts"
+      }
+    },
+    "svg1": {
+      "position": {
+        "x": "custom",
+        "y": "custom"
+      }
+    },
+    "svg2": {
+      "position": {
+        "x": "custom",
+        "y": "custom"
+      }
+    },
+    "freeText1": {
+      "fontSize": 16,
+      "fontWeight": 600,
+      "color": "#ffffff",
+      "position": {
+        "x": "custom",
+        "y": "custom"
+      }
+    },
+    "freeText2": {
+      "fontSize": 16,
+      "fontWeight": 600,
+      "color": "#ffffff",
+      "position": {
+        "x": "custom",
+        "y": "custom"
+      }
+    }
+  },
+  "styleOptions": {
+    "backgroundSupport": true,
+    "gradientSupport": true,
+    "styledChunksSupport": true,
+    "svgSupport": true,
+    "customPositioning": true
+  },
+  "defaultValues": {
+    "backgroundColor": "#ffffff",
+    "cardWidth": 90,
+    "cardHeight": 90,
+    "cardBorderRadius": 20,
+    "cardBackgroundColor": "#f5f5f5",
+    "textGap": 20,
+    "contentImageBorderRadius": 12,
+    "text1": "",
+    "text2": "",
+    "text3": "",
+    "text4": "",
+    "text5": "",
+    "freeText1Size": 16,
+    "freeText2Size": 16,
+    "freeText1Color": "#ffffff",
+    "freeText2Color": "#ffffff"
+  },
+  "preview": null
+}

@@ -1,0 +1,32 @@
+{
+  "carousel": {
+    "photos": [
+      {
+        "slide": 1,
+        "photo": {
+          "src": {
+            "landscape": "https://images.pexels.com/photos/936075/pexels-photo-936075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          }
+        }
+      }
+    ],
+    "copy": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "ff_capa",
+          "titulo": "POR TRÁS DA SUA LEGGING TEM UM MERCADO MAIOR QUE O PIB DE MUITOS PAÍSES",
+          "titleSpecialStyling": {
+            "enabled": true,
+            "lineStyles": [
+              { "color": "#FF6B00", "backgroundColor": "#000000", "bold": true, "padding": "0.3em 0.6em" },
+              { "color": "#FFFFFF", "backgroundColor": "#FF6B00", "bold": true, "padding": "0.3em 0.6em" },
+              { "color": "#FF6B00", "backgroundColor": "#000000", "bold": true, "padding": "0.3em 0.6em" }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "highlightColor": "#FF6B00"
+}

@@ -1,0 +1,127 @@
+{
+  "simple": {
+    "carrossel": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "stack-img",
+          "texto_1": "Welcome to our platform",
+          "texto_2": "Build amazing things",
+          "destaques": {
+            "texto_1": ["Welcome"],
+            "texto_2": ["amazing"]
+          }
+        }
+      ]
+    }
+  },
+  "multiple_slides": {
+    "carrossel": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "stack-img",
+          "texto_1": "Slide 1: Introduction",
+          "texto_2": "This is the first slide",
+          "destaques": {
+            "texto_1": ["Introduction"]
+          }
+        },
+        {
+          "numero": 2,
+          "estilo": "stack-img-bg",
+          "texto_1": "Slide 2: Features",
+          "texto_2": "Powerful and flexible",
+          "texto_3": "Built for developers",
+          "destaques": {
+            "texto_1": ["Features"],
+            "texto_2": ["Powerful", "flexible"],
+            "texto_3": ["developers"]
+          }
+        },
+        {
+          "numero": 3,
+          "estilo": "stack-img",
+          "texto_1": "Slide 3: Get Started",
+          "texto_2": "Ready to begin?",
+          "destaques": {
+            "texto_1": ["Get Started"]
+          }
+        }
+      ]
+    }
+  },
+  "complex": {
+    "carrossel": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "stack-img",
+          "texto_1": "The quick brown fox jumps over the lazy dog",
+          "texto_2": "A classic pangram sentence",
+          "texto_3": "Used for typography and font testing",
+          "texto_4": "Contains all letters of the alphabet",
+          "texto_5": "Perfect for design work",
+          "destaques": {
+            "texto_1": ["quick", "fox", "lazy"],
+            "texto_2": ["pangram"],
+            "texto_3": ["typography", "font testing"],
+            "texto_4": ["alphabet"],
+            "texto_5": ["design"]
+          }
+        },
+        {
+          "numero": 2,
+          "estilo": "stack-img-bg",
+          "texto_1": "Design matters",
+          "texto_2": "Every pixel counts in creating great user experiences",
+          "texto_3": "Attention to detail makes the difference",
+          "texto_4": "Typography is the voice of your design",
+          "texto_5": "Choose fonts wisely",
+          "destaques": {
+            "texto_1": ["Design"],
+            "texto_2": ["pixel", "great"],
+            "texto_3": ["detail"],
+            "texto_4": ["voice"],
+            "texto_5": ["wisely"]
+          }
+        }
+      ]
+    }
+  },
+  "no_highlights": {
+    "carrossel": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "stack-img",
+          "texto_1": "Simple slide without highlights",
+          "texto_2": "Just plain text",
+          "texto_3": "No special formatting"
+        },
+        {
+          "numero": 2,
+          "estilo": "stack-img-bg",
+          "texto_1": "Another simple slide",
+          "texto_2": "Clean and minimal"
+        }
+      ]
+    }
+  },
+  "single_field": {
+    "carrossel": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "stack-img",
+          "texto_1": "Only one text field is required"
+        },
+        {
+          "numero": 2,
+          "estilo": "stack-img-bg",
+          "texto_3": "You can use any field from 1 to 5"
+        }
+      ]
+    }
+  }
+}

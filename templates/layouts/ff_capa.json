@@ -1,0 +1,53 @@
+{
+  "template": "fitfeed-capa",
+  "viewportBackgroundType": "image",
+  "viewportBackgroundColor": "#000000",
+  "gradientBlurDisplay": "none",
+  "viewportGradientOverlay": {
+    "enabled": true,
+    "color": "#000000",
+    "startOpacity": 0.7,
+    "midOpacity": 0.3,
+    "height": 60,
+    "direction": "to top"
+  },
+  "title": "",
+  "titleStyle": {
+    "fontFamily": "Europa Grotesk SH",
+    "fontSize": "64px",
+    "fontWeight": "900",
+    "color": "#000000",
+    "textAlign": "center",
+    "textTransform": "uppercase",
+    "letterSpacing": "-1px",
+    "lineHeight": "1.2"
+  },
+  "logoImageUrl": "/logos/fitfeed.svg",
+  "logoColor": "#ffffff",
+  "logoImageSpecialPosition": "top-left",
+  "logoImageSpecialPadding": 6,
+  "logoImagePosition": {
+    "width": "150px",
+    "height": ""
+  },
+  "arrowImageUrl": "/logos/arrow.svg",
+  "arrowColor": "#ffffff",
+  "arrowImageSpecialPosition": "bottom-left",
+  "arrowImageSpecialPadding": 6,
+  "arrowImagePosition": {
+    "width": "90%",
+    "height": ""
+  },
+  "bottomText": "ARRASTE PRO LADO",
+  "bottomTextSpecialPosition": "bottom-right",
+  "bottomTextSpecialPadding": 3,
+  "bottomTextStyle": {
+    "fontFamily": "Neue Kaine",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "#ffffff",
+    "textTransform": "uppercase"
+  },
+  "bottomTextGapFromArrow": 10,
+  "bottomTextPaddingRight": 9
+}

@@ -1,0 +1,29 @@
+{
+  "carousel": {
+    "copy": {
+      "slides": [
+        {
+          "numero": 2,
+          "estilo": "stack-img",
+          "texto_1": "Henrique Dubugras, São Paulo, 15 para 16 anos. Briga pesada com a mãe, juíza do trabalho.",
+          "texto_2": "Pede emancipação, sai de casa e decide bancar a própria vida. A motivação é simples: pagar as contas e nunca mais depender de ninguém.",
+          "texto_3": "Independência forçada virou combustível para risco calculado e execução agressiva."
+        }
+      ]
+    },
+    "destaques": [
+      {
+        "numero": 2,
+        "destaques": {
+          "texto_3": [
+            {
+              "trecho": "urgência virou combustível",
+              "tipo": "italic",
+              "cor": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "template": "stack",
+  "useCard": true,
+  "backgroundColor": "#FF5722",
+  "cardWidth": 90,
+  "cardHeight": 90,
+  "cardBorderRadius": 20,
+  "cardBackgroundColor": "#ffffff",
+  "contentImageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1080",
+  "text1": "WITH CARD MODE",
+  "text1Style": {
+    "fontSize": "72px",
+    "fontWeight": "bold",
+    "color": "#333333",
+    "textAlign": "center"
+  },
+  "text2": "Imagem dentro do card",
+  "text2Style": {
+    "fontSize": "36px",
+    "fontWeight": "normal",
+    "color": "#666666",
+    "textAlign": "center"
+  },
+  "text3": "Com card container",
+  "text3Style": {
+    "fontSize": "24px",
+    "color": "#999999",
+    "textAlign": "center"
+  },
+  "text4": "",
+  "text5": "",
+  "cardGradientOverlay": {
+    "enabled": true,
+    "color": "#000000",
+    "startOpacity": 0.3,
+    "midOpacity": 0.15,
+    "height": 50,
+    "direction": "to top"
+  },
+  "textGap": 20,
+  "textVerticalAlign": "bottom"
+}

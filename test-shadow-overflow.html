@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      padding: 50px;
+      background: #f0f0f0;
+      font-family: Arial;
+    }
+
+    .container {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    /* COM overflow: hidden - sombra cortada nas laterais */
+    .with-overflow-hidden {
+      width: 400px;
+      height: 300px;
+      background: white;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* SEM overflow: hidden - sombra completa */
+    .without-overflow {
+      width: 400px;
+      height: 300px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image {
+      width: 80%;
+      height: 80%;
+      background: #4CAF50;
+      border-radius: 20px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>❌ COM overflow: hidden (sombra cortada nas laterais)</h2>
+    <div class="with-overflow-hidden">
+      <div class="image"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>✅ SEM overflow: hidden (sombra completa em todos os lados)</h2>
+    <div class="without-overflow">
+      <div class="image"></div>
+    </div>
+  </div>
+</body>
+</html>

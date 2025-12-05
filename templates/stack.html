@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1440">
+  <title>Stack Template</title>
+
+  <!-- Global shared CSS for logo, arrow, and bottom-text elements -->
+  <link rel="stylesheet" href="{{baseUrl}}/css/global-elements.css">
+
+  <style>
+    /* Fontes customizadas padrão */
+    @font-face {
+      font-family: 'Bebas Neue';
+      src: url('{{baseUrl}}/fonts/BebasNeue-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Bebas Neue';
+      src: url('{{baseUrl}}/fonts/BebasNeue-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('{{baseUrl}}/fonts/Montserrat-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('{{baseUrl}}/fonts/Montserrat-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url('{{baseUrl}}/fonts/Inter-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      src: url('{{baseUrl}}/fonts/Inter-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Product Sans';
+      src: url('{{baseUrl}}/fonts/ProductSans-Light.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Product Sans';
+      src: url('{{baseUrl}}/fonts/ProductSans-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Product Sans';
+      src: url('{{baseUrl}}/fonts/ProductSans-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Product Sans';
+      src: url('{{baseUrl}}/fonts/ProductSans-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Product Sans';
+      src: url('{{baseUrl}}/fonts/ProductSans-Black.ttf') format('truetype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===== VIEWPORT BACKGROUND ===== */
+    body {
+      width: 1080px;
+      height: 1440px;
+      background-color: {{backgroundColor}};
+      background-image: {{gradientBackground}};
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+      overflow: hidden;
+      position: relative;
+      {{styleVariables}}
+    }
+
+    /* Blur overlay (se habilitado) */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: {{gradientBlur}};
+      -webkit-backdrop-filter: {{gradientBlur}};
+      pointer-events: none;
+      z-index: 0;
+      display: {{gradientBlurDisplay}};
+    }
+
+    /* ===== CARD CONTAINER (z-index: 1) ===== */
+    .card-container {
+      width: {{cardWidth}}%;
+      height: {{cardHeight}}%;
+      background-color: {{cardBackgroundColor}};
+      background-image: url({{cardBackgroundImage}});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: {{cardBorderRadius}}px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: {{textVerticalJustify}};
+      gap: var(--content-gap, 40px); /* Gap entre texto e imagem */
+      padding: 60px;
+      box-sizing: border-box;
+      overflow: hidden;
+      {{customCardContainerStyles}}
+    }
+
+    /* Card gradient overlay pseudo-element */
+    .card-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-image: {{cardGradientCSS}};
+      pointer-events: none;
+      z-index: 0;
+      display: {{cardGradientDisplay}};
+      border-radius: {{cardBorderRadius}}px;
+    }
+
+    /* ===== TEXT FIELDS (z-index: 10) ===== */
+    .text-section {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: {{textGap}}px;
+      z-index: 10;
+      position: relative;
+      padding-top: var(--text-padding-top, 0px);
+      padding-bottom: var(--text-padding-bottom, 0px);
+      padding-left: var(--text-padding-left, 0px);
+      padding-right: var(--text-padding-right, 0px);
+    }
+
+    .text-item {
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    /* Hide empty text items */
+    .text-item:empty {
+      display: none;
+    }
+
+    /* Individual text field styles with default font sizes */
+    .text-1 {
+      font-size: 68px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .text-2 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .text-3 {
+      font-size: 36px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .text-4 {
+      font-size: 28px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .text-5 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #ffffff;
+    }
+
+    /* Support for styled chunks with background bars */
+    .text-item span {
+      display: inline;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    .text-item span[style*="background-color"] {
+      padding: 0.3em 0.6em;
+      border-radius: 4px;
+    }
+
+    /* ===== CONTENT IMAGE (z-index: 5) ===== */
+    .content-image-section {
+      flex: 1 1 auto;  /* Cresce para ocupar espaço disponível */
+      z-index: 5;
+      position: relative;
+      display: {{contentImageDisplay}};
+      min-height: 0;  /* Permite flexbox encolher */
+      overflow: hidden;
+      {{customContentImageSectionStyles}}
+    }
+
+    .content-image {
+      width: 100%;
+      height: 95%;  
+      object-fit: cover;  /* Mantém proporção sem cortar */
+      border-radius: {{contentImageBorderRadius}}px;
+      display: block;
+    }
+
+    /* Hide content image if src is empty */
+    .content-image[src=""] {
+      display: none;
+    }
+
+    /* ===== SVG ELEMENTS (z-index: 20) ===== */
+    /* SVG wrapper divs with absolute positioning */
+    .svg-1-wrapper {
+      position: absolute;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* SVG content container - make SVG fill wrapper dimensions */
+    .svg-1-content svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Force SVG elements to inherit color from wrapper */
+    .svg-1-content svg * {
+      fill: currentColor !important;
+    }
+
+    /* Hide SVG wrapper if content is empty */
+    .svg-1-wrapper:empty {
+      display: none;
+    }
+
+    /* ===== FREE TEXT ELEMENTS (z-index: 30) ===== */
+    .free-text {
+      position: absolute;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 6px;
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      z-index: 30;
+      white-space: pre-wrap;
+    }
+
+    .free-text-1 {
+      top: var(--freeText1-top, auto);
+      left: var(--freeText1-left, auto);
+      right: var(--freeText1-right, auto);
+      bottom: var(--freeText1-bottom, auto);
+      font-size: var(--freeText1-size, 16px);
+      color: var(--freeText1-color, #ffffff);
+      background-color: var(--freeText1-bgcolor, transparent);
+    }
+
+    .free-text-2 {
+      top: var(--freeText2-top, auto);
+      left: var(--freeText2-left, auto);
+      right: var(--freeText2-right, auto);
+      bottom: var(--freeText2-bottom, auto);
+      font-size: var(--freeText2-size, 16px);
+      color: var(--freeText2-color, #ffffff);
+      background-color: var(--freeText2-bgcolor, transparent);
+    }
+
+    .free-text-3 {
+      top: var(--freeText3-top, auto);
+      left: var(--freeText3-left, auto);
+      right: var(--freeText3-right, auto);
+      bottom: var(--freeText3-bottom, auto);
+      font-size: var(--freeText3-size, 16px);
+      color: var(--freeText3-color, #ffffff);
+      background-color: var(--freeText3-bgcolor, transparent);
+    }
+
+    /* Hide free text elements if empty */
+    .free-text:empty {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== SVG ELEMENT (absolutely positioned over card) ===== -->
+  <div class="svg-1-wrapper" style="top: {{svg1Top}}; left: {{svg1Left}}; right: {{svg1Right}}; bottom: {{svg1Bottom}}; width: {{svg1Width}}; height: {{svg1Height}}; color: {{svg1Color}};">
+    <div class="svg-1-content">{{{svg1Content}}}</div>
+  </div>
+
+  <!-- ===== FREE TEXT ELEMENTS (CTA-style, absolutely positioned) ===== -->
+  <div class="free-text free-text-1">{{freeText1}}</div>
+  <div class="free-text free-text-2">{{freeText2}}</div>
+  <div class="free-text free-text-3">{{freeText3}}</div>
+
+  <!-- ===== CARD CONTAINER ===== -->
+  <div class="card-container">
+
+    <!-- ===== TEXT FIELDS SECTION (5 stacked texts) ===== -->
+    <div class="text-section">
+      <div class="text-item text-1">{{text1}}</div>
+      <div class="text-item text-2">{{text2}}</div>
+      <div class="text-item text-3">{{text3}}</div>
+      <div class="text-item text-4">{{text4}}</div>
+      <div class="text-item text-5">{{text5}}</div>
+    </div>
+
+    <!-- ===== CONTENT IMAGE (responsive, below texts) ===== -->
+    <div class="content-image-section">
+      <img class="content-image" src="{{contentImageUrl}}" alt="Content" />
+    </div>
+
+    <!-- ===== ARROW + BOTTOM TEXT WRAPPER (inside card for proper positioning) ===== -->
+    <div class="arrow-bottom-wrapper" style="{{arrowWrapperStyles}}">
+      <img id="arrowImage"
+           src="{{arrowImageUrl}}"
+           style="{{arrowImageStyles}}"
+           alt="Arrow" />
+      <div class="bottom-text" style="{{bottomTextStyles}}">{{bottomText}}</div>
+    </div>
+
+  </div>
+
+  <!-- Global shared JavaScript for logo, arrow, and bottom-text elements -->
+  <script src="{{baseUrl}}/js/global-elements.js"></script>
+
+  <!-- Arrow-content positioning configuration -->
+  <script>
+    // Configuration for gap between content-image and arrow-wrapper
+    window.arrowContentPositioning = {{{arrowContentPositioningConfig}}};
+
+    console.log('========== STACK ARROW CONFIG ==========');
+    console.log('arrowContentPositioning:', window.arrowContentPositioning);
+    console.log('=========================================');
+  </script>
+
+  <!-- Dynamic arrow and content image positioning -->
+  <script src="{{baseUrl}}/js/arrow-content-positioning.js"></script>
+
+  <!-- Text fit configuration (for auto-sizing text to single line) -->
+  <script>
+    window.textFitConfig = {{{textFitConfig}}};
+    console.log('========== TEXT FIT CONFIG ==========');
+    console.log('textFitConfig:', window.textFitConfig);
+    console.log('======================================');
+  </script>
+
+  <!-- Text fit script (reduces font size when text wraps) -->
+  <script src="{{baseUrl}}/js/text-fit.js"></script>
+</body>
+</html>

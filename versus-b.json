@@ -1,0 +1,107 @@
+{
+  "template": "versus",
+  "viewportBackgroundType": "color",
+  "viewportBackgroundColor": "#000000",
+  "containerPaddingTop": 160,
+  "containerPaddingRight": 100,
+  "containerPaddingBottom": 160,
+  "containerPaddingLeft": 100,
+  "contentGap": 40,
+  "text1": "Reels virais",
+  "text1Style": {
+    "fontFamily": "Europa Grotesk SH",
+    "fontSize": "92px",
+    "fontWeight": "700",
+    "color": "#ffffff",
+    "textAlign": "center",
+    "lineHeight": "1.1"
+  },
+  "text2": "Ele criaria reels falando de dicas prática para empresários que querem vender usando as redes sociais.",
+  "text2Style": {
+    "fontFamily": "Product Sans",
+    "fontSize": "48px",
+    "fontWeight": "",
+    "color": "#ffffff",
+    "textAlign": "center",
+    "lineHeight": "1.2"
+  },
+  "imageLeftUrl": "https://media-cdn-v2.laodong.vn/storage/newsportal/2025/6/10/1521495/Mark-Zuckerberg.jpg?w=800&h=496&crop=auto&scale=both",
+  "imageRightUrl": "https://s2-valor.glbimg.com/MiJbc9zDkXVcxgkYwruQHYYcgpc=/0x0:3840x2567/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2024/R/9/n4DXk3SbO8AEsKvH21Bg/ee1b2a49d89c41c89a5d58f5998377f3-1-2b97ac0e88fb4c868ff269a61e3c187e.jpg",
+  "imageGap": 40,
+  "imageBorderRadius": 20,
+  "corner1Type": "svg",
+  "corner1Text": "tag",
+  "corner1TextStyle": {
+    "fontFamily": "Arial Black",
+    "fontSize": "32px",
+    "fontWeight": "900",
+    "color": "#000000",
+    "backgroundColor": "#ff00cc",
+    "padding": "5px 15px"
+  },
+  "corner1BackgroundEnabled": false,
+  "corner1SpecialPosition": "top-left",
+  "corner1PaddingX": 46,
+  "corner1PaddingY": 30,
+  "corner2Type": "text",
+  "corner2Text": "gerando valor",
+  "corner2TextStyle": {
+    "fontFamily": "Product Sans",
+    "fontSize": "24px",
+    "fontWeight": "400",
+    "color": "#ffffff",
+    "backgroundColor": "#ff00cc",
+    "padding": "5px 15px"
+  },
+  "corner2BackgroundEnabled": false,
+  "corner2SpecialPosition": "top-right",
+  "corner2PaddingX": 80,
+  "corner2PaddingY": 90,
+  "corner3Type": "text",
+  "corner3Text": "com inteligência",
+  "corner3TextStyle": {
+    "fontFamily": "Product Sans",
+    "fontSize": "24px",
+    "fontWeight": "400",
+    "color": "#ffffff",
+    "backgroundColor": "#ff00cc",
+    "padding": "5px 15px"
+  },
+  "corner3BackgroundEnabled": false,
+  "corner3SpecialPosition": "bottom-left",
+  "corner3PaddingX": 80,
+  "corner3PaddingY": 90,
+  "corner4Type": "text",
+  "corner4Text": "artificial",
+  "corner4TextStyle": {
+    "fontFamily": "Product Sans",
+    "fontSize": "24px",
+    "fontWeight": "400",
+    "color": "#ffffff",
+    "backgroundColor": "#ff00cc",
+    "padding": "5px 15px"
+  },
+  "corner4BackgroundEnabled": false,
+  "corner4SpecialPosition": "bottom-right",
+  "corner4PaddingX": 80,
+  "corner4PaddingY": 90,
+  "text1StyledChunks": [
+    {
+      "text": "virais",
+      "fontFamily": "'PT Serif', serif",
+      "italic": true,
+      "color": "#ffffff",
+      "bold": true
+    }
+  ],
+  "text2StyledChunks": [
+    {
+      "text": "empresários",
+      "bold": true,
+      "color": "#ffffff"
+    }
+  ],
+  "corner1SvgUrl": "/logos/logo_semfundo.svg",
+  "corner1SvgWidth": "150",
+  "corner1SvgColor": "#ffffff"
+}

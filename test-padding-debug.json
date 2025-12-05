@@ -1,0 +1,33 @@
+{
+  "template": "fitfeed-capa",
+  "backgroundColor": "#000000",
+  "cardBackgroundColor": "#ffffff",
+  "title": "TESTE PADDING",
+  "titleStyledChunks": [
+    {
+      "text": "TESTE",
+      "backgroundColor": "#FF0000",
+      "padding": "5px 10px"
+    },
+    {
+      "text": "PADDING",
+      "backgroundColor": "#0000FF",
+      "padding": "20px 40px"
+    }
+  ],
+  "titleStyle": {
+    "fontFamily": "Bebas Neue",
+    "fontSize": "72px",
+    "fontWeight": "900",
+    "color": "#ffffff",
+    "textAlign": "left",
+    "textTransform": "uppercase"
+  },
+  "subtitle": "",
+  "subtitleStyle": {
+    "fontFamily": "Montserrat",
+    "fontSize": "24px",
+    "fontWeight": "500",
+    "color": "#ffffff"
+  }
+}

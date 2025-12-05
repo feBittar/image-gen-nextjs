@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1080x1440</title>
+    <style>
+        /* Reset e centralização na tela do navegador */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #333; /* Fundo escuro para destacar o layout */
+            font-family: 'Arial Black', 'Arial', sans-serif; /* Fonte mais grossa */
+        }
+
+        /* --- O CONTAINER PRINCIPAL (1080x1440) --- */
+        .container {
+            position: relative; /* Âncora para o overlay */
+            width: 1080px;
+            height: 1440px;
+            background-color: white;
+            /* Padding define a margem branca interna onde as tags ficam */
+            padding: 100px 80px; 
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5); /* Sombra apenas para visualização no navegador */
+        }
+
+        /* --- CAMADA 1: CONTEÚDO (Blocos Coloridos) --- */
+        .content-layer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px; /* Espaço entre os blocos verticais */
+        }
+
+        /* Estilos de Texto e Blocos */
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        /* Título Laranja */
+        .header-box {
+            background-color: #ffcc99;
+            height: 250px; /* Altura fixa para o título */
+            font-size: 80px;
+        }
+
+        /* Área do Meio (Fotos) */
+        .comparison-row {
+            flex: 1; /* Ocupa todo o espaço vertical restante */
+            display: flex;
+            gap: 40px; /* Espaço entre as colunas rosa */
+        }
+
+        .photo-box {
+            background-color: #ff99ff;
+            flex: 1; /* 50% largura cada */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+        }
+
+        /* Rodapé Laranja */
+        .footer-box {
+            background-color: #ffcc99;
+            height: 300px; /* Altura do texto explicativo */
+            font-size: 80px;
+        }
+
+        /* --- CAMADA 2: OVERLAY DE TAGS (Camada Transparente) --- */
+        .overlay-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1080px;
+            height: 1440px;
+            pointer-events: none; /* Deixa os cliques passarem para baixo */
+            z-index: 99;
+        }
+
+        /* Estilo da Tag */
+        .tag {
+            position: absolute;
+            background-color: #ff00cc;
+            color: black;
+            font-size: 32px; /* Fonte ajustada para a resolução */
+            padding: 5px 15px;
+            font-weight: 900;
+        }
+
+        /* Posições exatas nas margens brancas */
+        /* Ajustei os valores para ficarem centralizados visualmente na margem branca */
+        .tag-tl { top: 40px; left: 40px; }
+        .tag-tr { top: 40px; right: 40px; }
+        .tag-bl { bottom: 40px; left: 40px; }
+        .tag-br { bottom: 40px; right: 40px; }
+
+        /* Ajuste de escala apenas para visualização em telas pequenas */
+        @media (max-height: 1500px) {
+            .container {
+                transform: scale(0.6); /* Reduz visualmente se a tela do user for pequena */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="content-layer">
+            <div class="box header-box">
+                titulo comparação
+            </div>
+
+            <div class="comparison-row">
+                <div class="box photo-box">
+                    <div>foto<br>comparação</div>
+                </div>
+                <div class="box photo-box">
+                    <div>foto<br>comparação</div>
+                </div>
+            </div>
+
+            <div class="box footer-box">
+                texto explicativo
+            </div>
+        </div>
+
+        <div class="overlay-layer">
+            <div class="tag tag-tl">tag</div>
+            <div class="tag tag-tr">tag</div>
+            <div class="tag tag-bl">tag</div>
+            <div class="tag tag-br">tag</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

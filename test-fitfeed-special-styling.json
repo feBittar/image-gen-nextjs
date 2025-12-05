@@ -1,0 +1,66 @@
+{
+  "template": "fitfeed-capa",
+  "title": "TRANSFORME SEU CORPO E ALCANCE SEUS OBJETIVOS DE FITNESS HOJE MESMO",
+  "titleStyle": {
+    "fontFamily": "Bebas Neue",
+    "fontSize": "72px",
+    "fontWeight": "900",
+    "color": "#ffffff",
+    "textAlign": "left",
+    "lineHeight": "1.2"
+  },
+  "titleSpecialStyling": {
+    "enabled": true,
+    "lineStyles": [
+      {
+        "color": "#FF6B00",
+        "bold": true,
+        "backgroundColor": "#000000",
+        "padding": "0.3em 0.6em"
+      },
+      {
+        "color": "#FFFFFF",
+        "bold": true,
+        "backgroundColor": "#FF6B00",
+        "padding": "0.3em 0.6em"
+      },
+      {
+        "color": "#000000",
+        "bold": true,
+        "backgroundColor": "#FFEB3B",
+        "padding": "0.3em 0.6em"
+      }
+    ]
+  },
+  "backgroundColor": "#1a1a1a",
+  "cardWidth": 90,
+  "cardHeight": 90,
+  "cardBorderRadius": 20,
+  "cardBackgroundColor": "#2d2d2d",
+  "cardGradientOverlay": {
+    "enabled": true,
+    "color": "#000000",
+    "startOpacity": 0.5,
+    "midOpacity": 0.3,
+    "height": 60,
+    "direction": "to top"
+  },
+  "logoImageUrl": "/logos/fitfeed-logo.svg",
+  "logoColor": "#FF6B00",
+  "logoImageSpecialPosition": "top-left",
+  "logoImageSpecialPadding": 5,
+  "arrowImageUrl": "/logos/arrow-right.svg",
+  "arrowColor": "#FFFFFF",
+  "arrowImageSpecialPosition": "bottom-right",
+  "arrowImageSpecialPadding": 5,
+  "bottomText": "COMECE AGORA",
+  "bottomTextSpecialPosition": "bottom-right",
+  "bottomTextSpecialPadding": 8,
+  "bottomTextStyle": {
+    "fontFamily": "Montserrat",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "#FFFFFF",
+    "textTransform": "uppercase"
+  }
+}

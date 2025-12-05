@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dual Text Template</title>
+  <link rel="stylesheet" href="/css/global-elements.css">
+  <style>
+    /* Fontes customizadas padrão */
+    @font-face {
+      font-family: 'Bebas Neue';
+      src: url('http://localhost:3000/fonts/BebasNeue-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Bebas Neue';
+      src: url('http://localhost:3000/fonts/BebasNeue-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('http://localhost:3000/fonts/Montserrat-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('http://localhost:3000/fonts/Montserrat-Light.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 1080px;
+      height: 1440px;
+      background-color: {{backgroundColor}};
+      background-image: {{gradientBackground}};
+      background-size: cover, cover;
+      background-position: center, center;
+      background-repeat: no-repeat, no-repeat;
+      display: flex;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Blur overlay (se habilitado) */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: {{gradientBlur}};
+      -webkit-backdrop-filter: {{gradientBlur}};
+      pointer-events: none;
+      z-index: 1;
+      display: {{gradientBlurDisplay}};
+    }
+
+    /* Container principal */
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 60px;
+      box-sizing: border-box;
+      justify-content: flex-end; /* Alinha conteúdo no bottom por padrão */
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Container dos textos */
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px; /* Margem/espaçamento entre os dois textos */
+      max-width: 100%;
+    }
+
+    /* Primeiro bloco de texto (topText) */
+    .top-text-section {
+      flex: 0 0 auto;
+    }
+
+    .top-text {
+      font-size: 68px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 0.95;
+      /* text-transform: uppercase; - REMOVIDO: Forçava uppercase apenas no título, causando espaçamento visual diferente do subtítulo */
+      letter-spacing: -1px;
+      /* font-family removido - será aplicado via inline style */
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Segundo bloco de texto (bottomText) */
+    .bottom-text-section {
+      flex: 0 0 auto;
+    }
+
+    .bottom-text {
+      font-size: 32px;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 1.4;
+      text-align: left;
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Modificadores de posição */
+    .container.position-top {
+      justify-content: flex-start;
+    }
+
+    .container.position-center {
+      justify-content: center;
+    }
+
+    .container.position-bottom {
+      justify-content: flex-end;
+    }
+
+    /* Modificadores de alinhamento de texto */
+    .text-container.align-left {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .text-container.align-center {
+      align-items: center;
+      text-align: center;
+    }
+
+    .text-container.align-right {
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    /* Modificadores de tamanho do gap */
+    .text-container.gap-small {
+      gap: 20px;
+    }
+
+    .text-container.gap-medium {
+      gap: 40px;
+    }
+
+    .text-container.gap-large {
+      gap: 60px;
+    }
+
+    .text-container.gap-xlarge {
+      gap: 80px;
+    }
+
+    /* Header opcional com labels pequenos */
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      z-index: 10;
+      width: 1080px;
+    }
+
+    .header-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Global logo element -->
+  <img id="logoImage"
+       src="{{logoImageUrl}}"
+       class="{{logoPositionXClass}} {{logoPositionYClass}}"
+       style="left: {{logoPositionX}}; top: {{logoPositionY}}; width: {{logoWidth}}; height: {{logoHeight}}; filter: {{logoFilter}};"
+       alt="Logo" />
+
+  <!-- Header opcional -->
+  <div class="header">
+    <span class="header-label">{{headerLeft}}</span>
+    <span class="header-label">{{headerRight}}</span>
+  </div>
+
+  <!-- Container principal -->
+  <div class="container position-{{position}}" id="mainContainer">
+    <div class="text-container gap-{{gap}} align-{{alignment}}" id="textContainer">
+      <!-- Primeiro texto -->
+      <div class="top-text-section">
+        <h1 class="top-text">{{title}}</h1>
+      </div>
+
+      <!-- Segundo texto -->
+      <div class="bottom-text-section">
+        <p class="bottom-text">{{subtitle}}</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fallback para valores padrão caso não sejam fornecidos
+    const container = document.getElementById('mainContainer');
+    const textContainer = document.getElementById('textContainer');
+
+    // Verificar se as classes de posição foram aplicadas
+    if (!container.className.includes('position-')) {
+      container.classList.add('position-bottom');
+    }
+
+    // Verificar se as classes de gap foram aplicadas
+    if (!textContainer.className.includes('gap-')) {
+      textContainer.classList.add('gap-medium');
+    }
+
+    // Verificar se as classes de alinhamento foram aplicadas
+    if (!textContainer.className.includes('align-')) {
+      textContainer.classList.add('align-left');
+    }
+  </script>
+
+  <!-- Global arrow element -->
+  <img id="arrowImage"
+       src="{{arrowImageUrl}}"
+       class="{{arrowPositionXClass}} {{arrowPositionYClass}}"
+       style="left: {{arrowPositionX}}; top: {{arrowPositionY}}; width: {{arrowWidth}}; height: {{arrowHeight}}; filter: {{arrowFilter}};"
+       alt="Arrow" />
+
+  <!-- Global bottom text element (CTA) -->
+  <div class="bottom-text {{bottomTextPositionXClass}} {{bottomTextPositionYClass}}"
+       style="left: {{bottomTextPositionX}}; top: {{bottomTextPositionY}}; {{bottomTextStyles}}">
+    {{bottomText}}
+  </div>
+
+  <script src="/js/global-elements.js"></script>
+</body>
+</html>

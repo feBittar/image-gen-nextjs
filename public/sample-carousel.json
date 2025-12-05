@@ -1,0 +1,52 @@
+{
+  "slides": [
+    {
+      "text1": "Welcome to Our Amazing Product",
+      "text2": "Discover something incredible",
+      "layout": "stack-img",
+      "imageSrc": ""
+    },
+    {
+      "text1": "Feature #1: Lightning Fast",
+      "text2": "Experience blazing speed",
+      "layout": "stack-img-bg",
+      "imageSrc": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1080&h=1440&fit=crop"
+    },
+    {
+      "text1": "Feature #2: Beautiful Design",
+      "text2": "Crafted with attention to detail",
+      "layout": "stack-img-bg",
+      "imageSrc": "https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=1080&h=1440&fit=crop"
+    },
+    {
+      "text1": "Feature #3: Easy to Use",
+      "text2": "Intuitive interface for everyone",
+      "layout": "stack-img",
+      "imageSrc": ""
+    },
+    {
+      "text1": "Feature #4: Powerful Tools",
+      "text2": "Everything you need in one place",
+      "layout": "stack-img-bg",
+      "imageSrc": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1080&h=1440&fit=crop"
+    },
+    {
+      "text1": "Join Thousands of Happy Users",
+      "text2": "Start your journey today",
+      "layout": "stack-img",
+      "imageSrc": ""
+    },
+    {
+      "text1": "Special Launch Offer",
+      "text2": "50% OFF for early adopters",
+      "layout": "stack-img-bg",
+      "imageSrc": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1080&h=1440&fit=crop"
+    },
+    {
+      "text1": "Ready to Get Started?",
+      "text2": "Click the link in bio",
+      "layout": "stack-img",
+      "imageSrc": ""
+    }
+  ]
+}

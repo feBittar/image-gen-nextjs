@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1440" />
+    <title>FitFeed - Capa</title>
+
+    <!-- Global shared CSS for logo, arrow, and bottom-text elements -->
+    <link rel="stylesheet" href="{{baseUrl}}/css/global-elements.css" />
+
+    <!-- Fontes customizadas e estilos template-específicos -->
+    <style>
+      @font-face {
+        font-family: 'Bebas Neue';
+        src: url('{{baseUrl}}/fonts/BebasNeue-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Bebas Neue';
+        src: url('{{baseUrl}}/fonts/BebasNeue-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('{{baseUrl}}/fonts/Montserrat-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('{{baseUrl}}/fonts/Montserrat-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ===== VIEWPORT BACKGROUND ===== */
+      body {
+        width: 1080px;
+        height: 1440px;
+        background-color: {{backgroundColor}};
+        background-image: {{gradientBackground}};
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Blur overlay opcional */
+      body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: {{gradientBlur}};
+        -webkit-backdrop-filter: {{gradientBlur}};
+        pointer-events: none;
+        z-index: 0;
+        display: {{gradientBlurDisplay}};
+      }
+
+      /* Viewport gradient overlay (same controls as card gradient) */
+      body::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: {{viewportGradientCSS}};
+        pointer-events: none;
+        z-index: 0;
+        display: {{viewportGradientDisplay}};
+      }
+
+      /* Container principal (direct child of body) */
+      .container {
+        width: 1080px;
+        height: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Alinha título no bottom */
+        padding: 60px;
+        padding-bottom: {{titleContainerPaddingBottom}}; /* Dynamic padding to position title above arrow */
+        box-sizing: border-box;
+        position: relative;
+        z-index: 10;
+      }
+
+      /* Container do título */
+      .title-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 100%;
+      }
+
+      /* Título com suporte a barras de fundo via styled chunks */
+      .title {
+        font-size: 72px;
+        font-weight: 900;
+        color: #000000;
+        line-height: 1.2; /* Default line height, can be overridden by titleStyle */
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        word-wrap: break-word;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        /* text-align removed - controlled by titleStyle.textAlign */
+        /* Barras de fundo são aplicadas via styled chunks inline */
+      }
+
+      /* Barras de fundo inline nos chunks */
+      .title span {
+        display: inline;
+        white-space: pre-wrap; /* Preserve spaces in styled chunks */
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        /* border-radius inherited from inline styles if provided */
+      }
+
+      /* Support for background bars with proper padding */
+      .title span[style*="background-color"] {
+        padding: 0.3em 0.6em;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Logo image with dynamic positioning -->
+    <img id="logoImage"
+         src="{{logoImageUrl}}"
+         style="{{logoPositionStyles}}"
+         alt="Logo" />
+
+    <!-- Container principal -->
+    <div class="container">
+      <div class="title-container">
+        <!-- Título com barras de fundo via styled chunks -->
+        <h1 class="title" style="{{titleStyleCSS}}">{{title}}</h1>
+      </div>
+    </div>
+
+    <!-- Arrow + Bottom Text Wrapper (positioned together) -->
+    <div class="arrow-bottom-wrapper" style="{{arrowWrapperStyles}}">
+      <img id="arrowImage"
+           src="{{arrowImageUrl}}"
+           style="{{arrowImageStyles}}"
+           alt="Arrow" />
+      <div class="bottom-text" style="{{bottomTextStyles}}">{{bottomText}}</div>
+    </div>
+
+    <!-- Global shared JavaScript for logo, arrow, and bottom-text elements -->
+    <script src="{{baseUrl}}/js/global-elements.js"></script>
+
+    <!-- Special styling configuration -->
+    <script>
+      // Configuration for line-based styling
+      window.titleSpecialStyling = {{{titleSpecialStylingConfig}}};
+
+      console.log('========== CONFIGURATION INJECTION ==========');
+      console.log('titleSpecialStyling:', window.titleSpecialStyling);
+      console.log('=============================================');
+    </script>
+
+    <!-- Line detector for special styling -->
+    <script src="{{baseUrl}}/js/line-detector.js"></script>
+
+    <!-- Dynamic title positioning based on arrow -->
+    <script src="{{baseUrl}}/js/title-arrow-positioning.js"></script>
+  </body>
+</html>

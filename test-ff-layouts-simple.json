@@ -1,0 +1,90 @@
+{
+  "carousel": {
+    "photos": [
+      {
+        "photo": {
+          "src": {
+            "portrait": "https://images.pexels.com/photos/7539818/pexels-photo-7539818.jpeg",
+            "landscape": "https://images.pexels.com/photos/7539818/pexels-photo-7539818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+          }
+        },
+        "slide": 1
+      },
+      {
+        "photo": {
+          "src": {
+            "portrait": "https://images.pexels.com/photos/936075/pexels-photo-936075.jpeg",
+            "landscape": "https://images.pexels.com/photos/936075/pexels-photo-936075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+          }
+        },
+        "slide": 2
+      },
+      {
+        "photo": {
+          "src": {
+            "portrait": "https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg",
+            "landscape": "https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+          }
+        },
+        "slide": 3
+      },
+      {
+        "photo": {
+          "src": {
+            "portrait": "https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg",
+            "landscape": "https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+          }
+        },
+        "slide": 4
+      }
+    ],
+    "copy": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "ff_stack1",
+          "texto_1": "ATHLEISURE NÃO É SÓ ROUPA DE ACADEMIA",
+          "texto_2": "É um mercado de US$ 257 bilhões que está transformando a indústria da moda."
+        },
+        {
+          "numero": 2,
+          "estilo": "ff_stack1-b",
+          "texto_1": "MARCAS COMO LULULEMON E NIKE",
+          "texto_2": "Estão lucrando bilhões vendendo roupas que você usa tanto na academia quanto no café."
+        },
+        {
+          "numero": 3,
+          "estilo": "ff_stack2",
+          "texto_1": "LIFESTYLE.",
+          "texto_2": "A roupa de treino virou símbolo de status.",
+          "texto_3": "E esse mercado só cresce."
+        },
+        {
+          "numero": 4,
+          "estilo": "ff_stack2-b",
+          "texto_1": "FUTURO.",
+          "texto_2": "Tecnologia, bem-estar e moda unidos.",
+          "texto_3": "O athleisure veio para ficar."
+        }
+      ]
+    },
+    "destaques": [
+      {
+        "numero": 3,
+        "destaques": {
+          "texto_1": [
+            { "trecho": "LIFESTYLE.", "tipo": "italic", "cor": true }
+          ]
+        }
+      },
+      {
+        "numero": 4,
+        "destaques": {
+          "texto_1": [
+            { "trecho": "FUTURO.", "tipo": "italic", "cor": true }
+          ]
+        }
+      }
+    ]
+  }
+}

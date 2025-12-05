@@ -1,0 +1,46 @@
+{
+  "template": "fitfeed-capa",
+  "viewportBackgroundType": "image",
+  "viewportBackgroundColor": "#000000",
+  "gradientBlurDisplay": "none",
+  "title": "POR TRÁS DA SUA LEGGING TEM UM MERCADO MAIOR QUE O PIB DE MUITOS PAÍSES: US$ 257 BILHÕES.",
+  "titleStyle": {
+    "fontFamily": "Europa Grotesk SH",
+    "fontSize": "64px",
+    "fontWeight": "900",
+    "color": "#ffffff",
+    "textAlign": "center",
+    "textTransform": "uppercase",
+    "letterSpacing": "-1px",
+    "lineHeight": "1.2"
+  },
+  "logoImageUrl": "/logos/fitfeed.svg",
+  "logoColor": "#ffffff",
+  "logoImageSpecialPosition": "top-left",
+  "logoImageSpecialPadding": 6,
+  "arrowImageUrl": "/logos/arrow.svg",
+  "arrowColor": "#ffffff",
+  "arrowImageSpecialPosition": "bottom-left",
+  "arrowImageSpecialPadding": 6,
+  "bottomText": "ARRASTE PRO LADO",
+  "bottomTextSpecialPosition": "bottom-right",
+  "bottomTextSpecialPadding": 3,
+  "bottomTextStyle": {
+    "fontFamily": "Neue Kaine",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "#ffffff",
+    "textTransform": "uppercase"
+  },
+  "bottomTextGapFromArrow": 10,
+  "bottomTextPaddingRight": 9,
+  "viewportBackgroundImage": "https://images.pexels.com/photos/936075/pexels-photo-936075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "logoImagePosition": {
+    "width": "150px",
+    "height": ""
+  },
+  "arrowImagePosition": {
+    "width": "90%",
+    "height": ""
+  }
+}

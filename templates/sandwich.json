@@ -1,0 +1,15 @@
+{
+  "name": "Sandwich Template",
+  "description": "Layout moderno estilo story com texto no topo e embaixo da imagem",
+  "dimensions": {
+    "width": 1080,
+    "height": 1440
+  },
+  "placeholders": [
+    "title",
+    "subtitle",
+    "backgroundImage",
+    "authorName"
+  ],
+  "preview": null
+}

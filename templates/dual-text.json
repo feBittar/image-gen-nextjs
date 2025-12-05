@@ -1,0 +1,30 @@
+{
+  "name": "Dual Text Template",
+  "description": "Template com dois blocos de texto empilhados, separados por margem ajustável, sem imagem central",
+  "dimensions": {
+    "width": 1080,
+    "height": 1440
+  },
+  "placeholders": [
+    "title",
+    "subtitle",
+    "backgroundColor",
+    "backgroundImage",
+    "headerLeft",
+    "headerRight",
+    "position",
+    "alignment",
+    "gap"
+  ],
+  "styleOptions": {
+    "position": ["top", "center", "bottom"],
+    "alignment": ["left", "center", "right"],
+    "gap": ["small", "medium", "large", "xlarge"]
+  },
+  "defaultValues": {
+    "position": "bottom",
+    "alignment": "left",
+    "gap": "medium"
+  },
+  "preview": null
+}

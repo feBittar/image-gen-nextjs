@@ -1,0 +1,41 @@
+{
+  "carousel": {
+    "photos": [
+      {
+        "photo": {
+          "src": {
+            "portrait": "https://images.pexels.com/photos/6914013/pexels-photo-6914013.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+            "landscape": "https://images.pexels.com/photos/6914013/pexels-photo-6914013.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+          }
+        },
+        "slide": 1
+      }
+    ],
+    "copy": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "stack-img-bg",
+          "texto_1": "Em 2017, nasce a Brex. Cartão corporativo para startups, com Max Levchin investindo depois de uma abordagem cirúrgica.",
+          "texto_2": "Henrique e Pedro aplicam para processo da Affirm só para entender o jogo de recrutamento no Vale.",
+          "texto_3": "Não estavam procurando emprego, estavam mapeando o sistema para entrar pela porta certa.",
+          "texto_principal": "texto_2"
+        }
+      ]
+    },
+    "destaques": [
+      {
+        "numero": 1,
+        "destaques": {
+          "texto_2": [
+            {
+              "trecho": "só para entender o jogo",
+              "tipo": "bold",
+              "cor": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

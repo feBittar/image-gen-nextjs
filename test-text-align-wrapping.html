@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Align vs Line Breaking Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f0f0f0;
+        }
+
+        .test-container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 2px solid #333;
+        }
+
+        .text-box {
+            width: 852px;
+            border: 2px solid #ff0000;
+            padding: 20px;
+            margin: 10px 0;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            background: #f9f9f9;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .justify {
+            text-align: justify;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .highlight {
+            background: yellow;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* Test with different word-break values */
+        .normal-break {
+            word-break: normal;
+        }
+
+        .break-all {
+            word-break: break-all;
+        }
+
+        .keep-all {
+            word-break: keep-all;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text-Align Line Breaking Test</h1>
+
+    <div class="highlight">
+        <strong>Key Question:</strong> Does text-align affect WHERE text wraps, or only HOW it's aligned after wrapping?
+    </div>
+
+    <div class="test-container">
+        <h2>Test 1: Same Text, Different Alignment</h2>
+        <p><strong>Text:</strong> "CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL"</p>
+        <p class="info">Width: 852px | Font: 48px bold | Line-height: 1.2</p>
+
+        <div class="text-box left normal-break">
+            <strong style="color: red;">LEFT:</strong><br>
+            CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL
+        </div>
+
+        <div class="text-box center normal-break">
+            <strong style="color: red;">CENTER:</strong><br>
+            CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL
+        </div>
+
+        <div class="text-box justify normal-break">
+            <strong style="color: red;">JUSTIFY:</strong><br>
+            CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>Test 2: Measuring Line Breaks with JavaScript</h2>
+        <p class="info">This will show exactly where lines break for each alignment</p>
+
+        <div id="measure-left" class="text-box left normal-break">
+            CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL
+        </div>
+
+        <div id="measure-center" class="text-box center normal-break">
+            CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL
+        </div>
+
+        <div id="results" style="background: #fff; padding: 20px; border: 2px solid #333; margin-top: 20px;"></div>
+    </div>
+
+    <div class="test-container">
+        <h2>Test 3: Word-Break Property Interaction</h2>
+        <p class="info">Testing if word-break affects text-align behavior</p>
+
+        <div class="text-box center normal-break">
+            <strong>word-break: normal (center)</strong><br>
+            CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL
+        </div>
+
+        <div class="text-box center break-all">
+            <strong>word-break: break-all (center)</strong><br>
+            CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL
+        </div>
+
+        <div class="text-box center keep-all">
+            <strong>word-break: keep-all (center)</strong><br>
+            CLÁSSICA LEGGING TEM FECHAMENTO COM ELÁSTICO NA CINTURA, BOLSO TRASEIRO E LATERAL
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>Test 4: Edge Case - Very Long Words</h2>
+
+        <div class="text-box left normal-break">
+            <strong>LEFT:</strong><br>
+            SUPERLONGWORDTHATCANNOTBREAK CLÁSSICA LEGGING TEM FECHAMENTO
+        </div>
+
+        <div class="text-box center normal-break">
+            <strong>CENTER:</strong><br>
+            SUPERLONGWORDTHATCANNOTBREAK CLÁSSICA LEGGING TEM FECHAMENTO
+        </div>
+    </div>
+
+    <script>
+        // Function to detect where lines break
+        function detectLineBreaks(elementId) {
+            const element = document.getElementById(elementId);
+            if (!element) return null;
+
+            const text = element.textContent.trim();
+            const words = text.split(/\s+/);
+            const range = document.createRange();
+            const lines = [];
+            let currentLine = [];
+            let lastTop = null;
+
+            // Clear element and rebuild word by word
+            element.innerHTML = '';
+
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.textContent = word;
+                if (index > 0) {
+                    element.appendChild(document.createTextNode(' '));
+                }
+                element.appendChild(span);
+
+                const rect = span.getBoundingClientRect();
+                const top = Math.round(rect.top);
+
+                if (lastTop === null || top === lastTop) {
+                    currentLine.push(word);
+                } else {
+                    lines.push(currentLine.join(' '));
+                    currentLine = [word];
+                }
+
+                lastTop = top;
+            });
+
+            if (currentLine.length > 0) {
+                lines.push(currentLine.join(' '));
+            }
+
+            // Restore original text
+            element.textContent = text;
+
+            return lines;
+        }
+
+        // Run detection after page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const leftLines = detectLineBreaks('measure-left');
+                const centerLines = detectLineBreaks('measure-center');
+
+                const resultsDiv = document.getElementById('results');
+
+                let html = '<h3>Line Break Analysis</h3>';
+
+                html += '<div style="margin: 20px 0;"><strong style="color: blue;">LEFT-ALIGNED:</strong><br>';
+                leftLines.forEach((line, i) => {
+                    html += `Line ${i + 1}: <code style="background: #eee; padding: 2px 5px;">${line}</code><br>`;
+                });
+                html += '</div>';
+
+                html += '<div style="margin: 20px 0;"><strong style="color: green;">CENTER-ALIGNED:</strong><br>';
+                centerLines.forEach((line, i) => {
+                    html += `Line ${i + 1}: <code style="background: #eee; padding: 2px 5px;">${line}</code><br>`;
+                });
+                html += '</div>';
+
+                // Compare
+                const identical = JSON.stringify(leftLines) === JSON.stringify(centerLines);
+                html += `<div style="margin: 20px 0; padding: 15px; background: ${identical ? '#d4edda' : '#f8d7da'}; border: 2px solid ${identical ? '#28a745' : '#dc3545'}; border-radius: 5px;">`;
+                html += `<strong style="font-size: 18px;">Result: ${identical ? '✓ IDENTICAL' : '✗ DIFFERENT'}</strong><br>`;
+                html += `<p style="margin-top: 10px;">Line breaks occur at the ${identical ? 'SAME' : 'DIFFERENT'} positions regardless of text-align value.</p>`;
+                html += '</div>';
+
+                resultsDiv.innerHTML = html;
+            }, 100);
+        });
+    </script>
+</body>
+</html>

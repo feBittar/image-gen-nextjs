@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandwich Template</title>
+  <link rel="stylesheet" href="/css/global-elements.css">
+  <style>
+    /* Fontes customizadas padrão */
+    @font-face {
+      font-family: 'Bebas Neue';
+      src: url('http://localhost:3000/fonts/BebasNeue-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Bebas Neue';
+      src: url('http://localhost:3000/fonts/BebasNeue-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('http://localhost:3000/fonts/Montserrat-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('http://localhost:3000/fonts/Montserrat-Light.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 1080px;
+      height: 1440px;
+      background-color: {{backgroundColor}};
+      background-image: {{gradientBackground}};
+      background-size: cover, cover;
+      background-position: center, center;
+      background-repeat: no-repeat, no-repeat;
+      display: flex;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Blur overlay (se habilitado) */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: {{gradientBlur}};
+      -webkit-backdrop-filter: {{gradientBlur}};
+      pointer-events: none;
+      z-index: 1;
+      display: {{gradientBlurDisplay}};
+    }
+
+    /* Header com labels pequenos */
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      z-index: 20;
+      width: 1080px;
+    }
+
+    .header-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Container principal */
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 60px 40px 60px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Título grande no topo */
+    .title-section {
+      flex: 0 0 auto;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-size: 68px;
+      font-weight: 900;
+      color: #2d1810;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      /* font-family removido - será aplicado via inline style */
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Imagem central */
+    .image-section {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+    }
+
+    /* Texto inferior (subtítulo) */
+    .subtitle-section {
+      flex: 0 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 1.4;
+      text-align: left;
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Footer com dots de navegação */
+    .footer {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding-top: 10px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      display: inline-block;
+    }
+
+    .dot.active {
+      background: #ffffff;
+      width: 12px;
+      height: 12px;
+    }
+
+    /* Nome do autor (opcional no header) */
+    .author {
+      position: absolute;
+      bottom: 20px;
+      left: 60px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo Image Element -->
+  <img id="logoImage"
+       src="{{logoImageUrl}}"
+       class="{{logoPositionXClass}} {{logoPositionYClass}}"
+       style="left: {{logoPositionX}}; top: {{logoPositionY}}; width: {{logoWidth}}; height: {{logoHeight}}; filter: {{logoFilter}};"
+       alt="Logo" />
+
+  <!-- Header com labels -->
+  <div class="header">
+    <span class="header-label">BRAINSTORM</span>
+    <span class="header-label">{{authorName}}</span>
+  </div>
+
+  <!-- Container principal -->
+  <div class="container">
+    <div class="title-section">
+      <h1 class="title">{{title}}</h1>
+    </div>
+
+    <!-- Imagem central -->
+    <div class="image-section">
+      <img class="main-image" src="{{contentImage}}" alt="Content Image">
+    </div>
+
+    <!-- Subtítulo inferior -->
+    <div class="subtitle-section">
+      <p class="subtitle">{{subtitle}}</p>
+    </div>
+
+  </div>
+
+  <!-- Arrow Image Element -->
+  <img id="arrowImage"
+       src="{{arrowImageUrl}}"
+       class="{{arrowPositionXClass}} {{arrowPositionYClass}}"
+       style="left: {{arrowPositionX}}; top: {{arrowPositionY}}; width: {{arrowWidth}}; height: {{arrowHeight}}; filter: {{arrowFilter}};"
+       alt="Arrow" />
+
+  <!-- Bottom Text Element -->
+  <div class="bottom-text {{bottomTextPositionXClass}} {{bottomTextPositionYClass}}"
+       style="left: {{bottomTextPositionX}}; top: {{bottomTextPositionY}}; {{bottomTextStyles}}">
+    {{bottomText}}
+  </div>
+
+  <!-- Global Elements Handler Script -->
+  <script src="/js/global-elements.js"></script>
+</body>
+</html>

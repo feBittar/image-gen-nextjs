@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=2160, height=1440">
+  <title>Versus Duo Template - Split Image</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 2160px;
+      height: 1440px;
+      background-color: {{backgroundColor}};
+      font-family: 'Arial Black', 'Arial', sans-serif;
+      position: relative;
+      overflow: hidden;
+      {{styleVariables}}
+    }
+
+    /* === SLIDE CONTAINERS === */
+    .slide-container {
+      position: absolute;
+      top: 0;
+      width: 1080px;
+      height: 1440px;
+    }
+
+    .slide-1-container {
+      left: 0;
+    }
+
+    .slide-2-container {
+      left: 1080px;
+    }
+
+    .content-layer {
+      width: 100%;
+      height: 100%;
+      padding: var(--container-padding-top, 100px)
+               var(--container-padding-right, 80px)
+               var(--container-padding-bottom, 100px)
+               var(--container-padding-left, 80px);
+      display: flex;
+      flex-direction: column;
+      gap: var(--content-gap, 40px);
+    }
+
+    .title-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: fit-content;
+      position: relative;
+      z-index: 10;
+    }
+
+    .comparison-row {
+      flex: 1;
+      display: flex;
+      gap: var(--image-gap, 40px);
+      min-height: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .comparison-image {
+      flex: 1;
+      border-radius: var(--image-border-radius, 0px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .comparison-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: fit-content;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* === CENTER IMAGE LAYER (PNG spanning both slides) === */
+    .center-image-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2160px;
+      height: 1440px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .center-image-layer img {
+      position: absolute;
+      left: calc(50% + var(--image-offset-x, 0px));
+      top: calc(50% + var(--image-offset-y, 0px));
+      transform: translate(-50%, -50%) scale(var(--image-scale, 1));
+      max-height: 100%;
+      object-fit: contain;
+      /* Outline effect using multiple drop-shadows */
+      filter: var(--center-image-outline, none);
+    }
+
+    /* === CORNERS OVERLAY === */
+    .overlay-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2160px;
+      height: 1440px;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    .corner {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Corners for Slide 1 (left half: 0-1080px) */
+    .corner-tl-s1 {
+      top: var(--corner1-top, 40px);
+      left: var(--corner1-left, 40px);
+    }
+
+    .corner-tr-s1 {
+      top: var(--corner2-top, 40px);
+      left: calc(1080px - var(--corner2-right, 40px));
+      transform: translateX(-100%);
+    }
+
+    .corner-bl-s1 {
+      bottom: var(--corner3-bottom, 40px);
+      left: var(--corner3-left, 40px);
+    }
+
+    .corner-br-s1 {
+      bottom: var(--corner4-bottom, 40px);
+      left: calc(1080px - var(--corner4-right, 40px));
+      transform: translateX(-100%);
+    }
+
+    /* Corners for Slide 2 (right half: 1080-2160px) */
+    .corner-tl-s2 {
+      top: var(--corner1-top, 40px);
+      left: calc(1080px + var(--corner1-left, 40px));
+    }
+
+    .corner-tr-s2 {
+      top: var(--corner2-top, 40px);
+      right: var(--corner2-right, 40px);
+    }
+
+    .corner-bl-s2 {
+      bottom: var(--corner3-bottom, 40px);
+      left: calc(1080px + var(--corner3-left, 40px));
+    }
+
+    .corner-br-s2 {
+      bottom: var(--corner4-bottom, 40px);
+      right: var(--corner4-right, 40px);
+    }
+
+    .corner svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* SVG colors for all corners */
+    .corner-tl-s1 svg *, .corner-tl-s2 svg * { fill: var(--corner1-svg-color, currentColor) !important; }
+    .corner-tr-s1 svg *, .corner-tr-s2 svg * { fill: var(--corner2-svg-color, currentColor) !important; }
+    .corner-bl-s1 svg *, .corner-bl-s2 svg * { fill: var(--corner3-svg-color, currentColor) !important; }
+    .corner-br-s1 svg *, .corner-br-s2 svg * { fill: var(--corner4-svg-color, currentColor) !important; }
+
+    .corner img {
+      width: var(--corner-svg-width, 60px);
+      height: var(--corner-svg-height, 60px);
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <!-- Slide 1 (left half) -->
+  <div class="slide-container slide-1-container">
+    <div class="content-layer">
+      <div class="title-box">{{slide1Text1}}</div>
+      <div class="comparison-row">
+        <div class="comparison-image">
+          <img src="{{slide1ImageLeftUrl}}" alt="Slide 1 Left" />
+        </div>
+        <div class="comparison-image">
+          <img src="{{slide1ImageRightUrl}}" alt="Slide 1 Right" />
+        </div>
+      </div>
+      <div class="footer-box">{{slide1Text2}}</div>
+    </div>
+  </div>
+
+  <!-- Slide 2 (right half) -->
+  <div class="slide-container slide-2-container">
+    <div class="content-layer">
+      <div class="title-box">{{slide2Text1}}</div>
+      <div class="comparison-row">
+        <div class="comparison-image">
+          <img src="{{slide2ImageLeftUrl}}" alt="Slide 2 Left" />
+        </div>
+        <div class="comparison-image">
+          <img src="{{slide2ImageRightUrl}}" alt="Slide 2 Right" />
+        </div>
+      </div>
+      <div class="footer-box">{{slide2Text2}}</div>
+    </div>
+  </div>
+
+  <!-- Center PNG image spanning both slides (z-index: 5, above images but below text) -->
+  <div class="center-image-layer">
+    <img src="{{centerImageUrl}}" alt="Center Image" />
+  </div>
+
+  <!-- Corner overlay (duplicated for both slides) -->
+  <div class="overlay-layer">
+    <!-- Corners for Slide 1 -->
+    <div class="corner corner-tl-s1">{{{corner1Content}}}</div>
+    <div class="corner corner-tr-s1">{{{corner2Content}}}</div>
+    <div class="corner corner-bl-s1">{{{corner3Content}}}</div>
+    <div class="corner corner-br-s1">{{{corner4Content}}}</div>
+
+    <!-- Corners for Slide 2 (same content, mirrored positions) -->
+    <div class="corner corner-tl-s2">{{{corner1Content}}}</div>
+    <div class="corner corner-tr-s2">{{{corner2Content}}}</div>
+    <div class="corner corner-bl-s2">{{{corner3Content}}}</div>
+    <div class="corner corner-br-s2">{{{corner4Content}}}</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "name": "FitFeed - Capa",
+  "description": "Template de capa com título em destaque, subtítulo e logo. Ideal para capas de posts fitness com barras de fundo nos textos.",
+  "dimensions": {
+    "width": 1080,
+    "height": 1440
+  },
+  "placeholders": [
+    "title",
+    "subtitle",
+    "logo",
+    "backgroundColor",
+    "gradientBackground",
+    "gradientBlur",
+    "gradientBlurDisplay"
+  ],
+  "layout": {
+    "title": {
+      "fontSize": 72,
+      "fontWeight": 900,
+      "color": "#ffffff",
+      "align": "left",
+      "textTransform": "uppercase",
+      "position": {
+        "x": 60,
+        "y": "bottom"
+      }
+    },
+    "subtitle": {
+      "fontSize": 24,
+      "fontWeight": 500,
+      "color": "#ffffff",
+      "align": "left",
+      "position": {
+        "x": 60,
+        "y": "bottom"
+      }
+    },
+    "logo": {
+      "fontSize": 32,
+      "fontWeight": 700,
+      "color": "rgba(255, 255, 255, 0.9)",
+      "align": "left",
+      "textTransform": "uppercase",
+      "position": {
+        "x": 60,
+        "y": 40
+      }
+    }
+  },
+  "styleOptions": {
+    "fonts": ["Bebas Neue", "Montserrat"],
+    "backgroundSupport": true,
+    "gradientSupport": true,
+    "blurSupport": true,
+    "styledChunksSupport": true
+  },
+  "defaultValues": {
+    "backgroundColor": "#000000",
+    "logo": ""
+  },
+  "preview": null
+}

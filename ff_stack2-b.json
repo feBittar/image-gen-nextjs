@@ -1,0 +1,128 @@
+{
+  "template": "stack",
+  "backgroundColor": "#FF5722",
+  "viewportBackgroundType": "color",
+  "viewportBackgroundColor": "#000000",
+  "useCard": true,
+  "cardWidth": 90,
+  "cardHeight": 90,
+  "cardBorderRadius": 20,
+  "cardBackgroundType": "color",
+  "cardBackgroundColor": "#000000",
+  "reverseLayout": false,
+  "text1": "ATHLEISURE.",
+  "text2": "É tipo o streetwear do bem-estar.",
+  "text3": "A roupa de treino com status de lifestyle.",
+  "text4": "",
+  "text5": "",
+  "text1StyledChunks": [
+    {
+      "text": "ATHLEISURE.",
+      "color": "#fff6a7",
+      "italic": true
+    }
+  ],
+  "textGap": 20,
+  "textVerticalAlign": "bottom",
+  "textPaddingTop": 0,
+  "textPaddingBottom": 0,
+  "textPaddingLeft": 0,
+  "textPaddingRight": 0,
+  "text1Style": {
+    "fontFamily": "'PT Serif', serif",
+    "fontSize": "120px",
+    "fontWeight": "400",
+    "color": "#fff6a7",
+    "textAlign": "center"
+  },
+  "text2Style": {
+    "fontFamily": "Neue Kaine",
+    "fontSize": "36px",
+    "fontWeight": "400",
+    "color": "#ffffff",
+    "textAlign": "center"
+  },
+  "text3Style": {
+    "fontFamily": "Neue Kaine",
+    "fontSize": "36px",
+    "fontWeight": "",
+    "color": "#ffffff",
+    "textAlign": "center"
+  },
+  "text4Style": {
+    "fontFamily": "Arial",
+    "fontSize": "24px",
+    "fontWeight": "normal",
+    "color": "#666666",
+    "textAlign": "center"
+  },
+  "text5Style": {
+    "fontFamily": "Arial",
+    "fontSize": "20px",
+    "fontWeight": "normal",
+    "color": "#999999",
+    "textAlign": "center"
+  },
+  "freeText1Style": {
+    "fontFamily": "Arial",
+    "fontSize": "16px",
+    "fontWeight": "normal",
+    "color": "#000000",
+    "backgroundColor": "transparent",
+    "textAlign": "left"
+  },
+  "freeText2Style": {
+    "fontFamily": "Arial",
+    "fontSize": "16px",
+    "fontWeight": "normal",
+    "color": "#000000",
+    "backgroundColor": "transparent",
+    "textAlign": "left"
+  },
+  "freeText3Style": {
+    "fontFamily": "Arial",
+    "fontSize": "16px",
+    "fontWeight": "normal",
+    "color": "#000000",
+    "backgroundColor": "transparent",
+    "textAlign": "left"
+  },
+  "freeText1SpecialPosition": "none",
+  "freeText2SpecialPosition": "none",
+  "freeText3SpecialPosition": "none",
+  "freeText1SpecialPadding": 8,
+  "freeText2SpecialPadding": 8,
+  "freeText3SpecialPadding": 8,
+  "svg1Content": "",
+  "svg1Url": "/logos/fitfeed.svg",
+  "svg1Position": {
+    "top": "",
+    "left": "",
+    "width": "150px",
+    "height": ""
+  },
+  "svg1Color": "#ffffff",
+  "svg1SpecialPosition": "top-left",
+  "svg1SpecialPadding": 5,
+  "arrowImageUrl": "/logos/arrow.svg",
+  "arrowColor": "#ffffff",
+  "arrowImagePosition": {
+    "width": "90%",
+    "height": ""
+  },
+  "arrowImageSpecialPosition": "bottom-left",
+  "arrowImageSpecialPadding": 6,
+  "arrowContentGap": 20,
+  "bottomText": "ARRASTE PRO LADO",
+  "bottomTextStyle": {
+    "fontFamily": "Neue Kaine",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "#ffffff",
+    "textAlign": "right"
+  },
+  "bottomTextGapFromArrow": 15,
+  "bottomTextPaddingRight": 0,
+  "bottomTextSpecialPosition": "none",
+  "bottomTextSpecialPadding": 6
+}

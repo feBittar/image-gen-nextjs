@@ -1,0 +1,74 @@
+{
+  "enabledModules": ["viewport", "card", "textFields", "contentImage"],
+  "moduleData": {
+    "viewport": {
+      "backgroundType": "color",
+      "backgroundColor": "#000000",
+      "blurEnabled": false,
+      "gradientOverlay": {
+        "enabled": false
+      }
+    },
+    "card": {
+      "enabled": true,
+      "width": 90,
+      "height": 90,
+      "borderRadius": 20,
+      "backgroundType": "color",
+      "backgroundColor": "#1a1a1a",
+      "padding": {
+        "top": 60,
+        "right": 60,
+        "bottom": 60,
+        "left": 60
+      },
+      "gradientOverlay": {
+        "enabled": false
+      },
+      "shadow": {
+        "enabled": false
+      }
+    },
+    "textFields": {
+      "count": 1,
+      "gap": 30,
+      "verticalAlign": "top",
+      "fields": [
+        {
+          "content": "TESTE CONTENT IMAGE",
+          "style": {
+            "fontFamily": "Arial",
+            "fontSize": "48px",
+            "fontWeight": "900",
+            "color": "#ffffff",
+            "textAlign": "center",
+            "textTransform": "uppercase"
+          },
+          "styledChunks": [],
+          "verticalOffset": 0
+        }
+      ]
+    },
+    "contentImage": {
+      "enabled": true,
+      "url": "https://picsum.photos/800/600",
+      "mode": "single",
+      "maxWidth": 90,
+      "maxHeight": 60,
+      "borderRadius": 20,
+      "objectFit": "cover",
+      "position": "center",
+      "shadow": {
+        "enabled": true,
+        "blur": 20,
+        "spread": 0,
+        "color": "rgba(0, 0, 0, 0.5)"
+      }
+    }
+  },
+  "outputOptions": {
+    "format": "png",
+    "quality": 100,
+    "filename": "test-content-image"
+  }
+}

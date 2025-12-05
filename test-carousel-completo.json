@@ -1,0 +1,65 @@
+{
+  "carousel": {
+    "photos": [
+      {
+        "photo": {
+          "src": {
+            "portrait": "https://images.pexels.com/photos/6914013/pexels-photo-6914013.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800"
+          }
+        },
+        "slide": 1
+      }
+    ],
+    "copy": {
+      "slides": [
+        {
+          "numero": 1,
+          "estilo": "stack-img-bg",
+          "texto_1": "O CARA QUE PIVOTOU UMA EMPRESA DE 12 BILHÕES",
+          "texto_2": "SEM ROMANTISMO",
+          "texto_principal": "texto_1"
+        },
+        {
+          "numero": 2,
+          "estilo": "stack-img",
+          "texto_1": "Henrique Dubugras, São Paulo, 15 para 16 anos.",
+          "texto_2": "Independência forçada virou combustível para risco calculado.",
+          "texto_3": "Nasceu a Brex."
+        }
+      ]
+    },
+    "destaques": [
+      {
+        "numero": 1,
+        "destaques": {
+          "texto_2": [
+            {
+              "trecho": "SEM ROMANTISMO",
+              "tipo": "bold+italic",
+              "cor": false
+            }
+          ]
+        }
+      },
+      {
+        "numero": 2,
+        "destaques": {
+          "texto_2": [
+            {
+              "trecho": "combustível",
+              "tipo": "italic",
+              "cor": false
+            }
+          ],
+          "texto_3": [
+            {
+              "trecho": "Nasceu a Brex",
+              "tipo": "bold",
+              "cor": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

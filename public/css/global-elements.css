@@ -1,0 +1,291 @@
+/*
+ * Global Elements CSS
+ * Reusable styles for logo, arrow, and bottom-text elements
+ *
+ * Usage:
+ *   <link rel="stylesheet" href="http://localhost:3000/css/global-elements.css">
+ *
+ * This file provides base styling for common UI elements that appear
+ * across multiple templates. Each element supports dynamic positioning
+ * via CSS classes and inline styles.
+ */
+
+/* ============================================================================
+ * LOGO IMAGE STYLES
+ *
+ * The #logoImage element supports:
+ *   - Dynamic positioning via left, top inline styles
+ *   - Dynamic sizing via width, height inline styles
+ *   - Dynamic filtering via filter inline styles
+ *   - Positioning classes: .center, .left, .right, .top, .bottom
+ *   - Combinations: .center.center, .left.center, .right.top, etc.
+ * ============================================================================ */
+
+#logoImage {
+  /* Position and layering */
+  position: absolute;
+  z-index: 30;
+
+  /* Display and sizing */
+  display: block;
+  object-fit: contain;
+
+  /* Note: width, height, left, top, filter applied via inline styles */
+}
+
+/* Hide logo image when src attribute is empty */
+#logoImage[src=""] {
+  display: none;
+}
+
+/* ---- Horizontal Positioning ---- */
+
+/* Center horizontally - applies translateX(-50%) transform */
+#logoImage.center {
+  transform: translateX(-50%);
+}
+
+/* Left position - no transform needed */
+#logoImage.left {
+  /* Positioned via inline style: left: value */
+}
+
+/* Right position - no transform needed */
+#logoImage.right {
+  /* Positioned via inline style: right: value */
+}
+
+/* ---- Vertical Positioning ---- */
+
+/* Top position - no transform needed */
+#logoImage.top {
+  /* Positioned via inline style: top: value */
+}
+
+/* Bottom position - no transform needed */
+#logoImage.bottom {
+  /* Positioned via inline style: bottom: value */
+}
+
+/* Center vertically - applies translateY(-50%) transform */
+#logoImage.center.top,
+#logoImage.center.bottom {
+  transform: translateX(-50%);
+}
+
+#logoImage.left.center,
+#logoImage.right.center {
+  transform: translateY(-50%);
+}
+
+/* ---- Combined Positioning ---- */
+
+/* Center both horizontally and vertically */
+#logoImage.center.center {
+  transform: translate(-50%, -50%);
+}
+
+
+/* ============================================================================
+ * ARROW + BOTTOM TEXT WRAPPER
+ *
+ * Container that holds both the arrow and bottom text together.
+ * The wrapper is positioned absolutely, and children flow naturally.
+ * This makes bottom-text "attached" to the arrow with simple margin/padding.
+ * ============================================================================ */
+
+.arrow-bottom-wrapper {
+  position: absolute;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Hide wrapper when arrow has no src */
+.arrow-bottom-wrapper:has(#arrowImage[src=""]) {
+  display: none;
+}
+
+/* Arrow inside wrapper - fills wrapper width */
+.arrow-bottom-wrapper #arrowImage {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hide arrow when src is empty */
+.arrow-bottom-wrapper #arrowImage[src=""] {
+  display: none;
+}
+
+/* Bottom text inside wrapper - flows naturally below arrow */
+.arrow-bottom-wrapper .bottom-text {
+  position: relative;
+  display: block;
+  text-align: right;
+  /* margin-top and padding-right applied via inline styles */
+}
+
+/* ============================================================================
+ * ARROW IMAGE STYLES (standalone, outside wrapper)
+ *
+ * The #arrowImage element supports:
+ *   - Dynamic positioning via left, top inline styles
+ *   - Dynamic sizing via width, height inline styles
+ *   - Dynamic filtering via filter inline styles
+ *   - Positioning classes: .center, .left, .right, .top, .bottom
+ *   - Combinations: .center.center, .left.center, .right.top, etc.
+ * ============================================================================ */
+
+body > #arrowImage {
+  /* Position and layering */
+  position: absolute;
+  z-index: 25;
+
+  /* Display and sizing */
+  display: block;
+  object-fit: contain;
+
+  /* Note: width, height, left, top, filter applied via inline styles */
+}
+
+/* Hide arrow image when src attribute is empty */
+body > #arrowImage[src=""] {
+  display: none;
+}
+
+/* ---- Horizontal Positioning ---- */
+
+/* Center horizontally - applies translateX(-50%) transform */
+#arrowImage.center {
+  transform: translateX(-50%);
+}
+
+/* Left position - no transform needed */
+#arrowImage.left {
+  /* Positioned via inline style: left: value */
+}
+
+/* Right position - no transform needed */
+#arrowImage.right {
+  /* Positioned via inline style: right: value */
+}
+
+/* ---- Vertical Positioning ---- */
+
+/* Top position - no transform needed */
+#arrowImage.top {
+  /* Positioned via inline style: top: value */
+}
+
+/* Bottom position - no transform needed */
+#arrowImage.bottom {
+  /* Positioned via inline style: bottom: value */
+}
+
+/* Center vertically - applies translateY(-50%) transform */
+#arrowImage.center.top,
+#arrowImage.center.bottom {
+  transform: translateX(-50%);
+}
+
+#arrowImage.left.center,
+#arrowImage.right.center {
+  transform: translateY(-50%);
+}
+
+/* ---- Combined Positioning ---- */
+
+/* Center both horizontally and vertically */
+#arrowImage.center.center {
+  transform: translate(-50%, -50%);
+}
+
+
+/* ============================================================================
+ * BOTTOM TEXT ELEMENT STYLES
+ *
+ * The .bottom-text element supports:
+ *   - Dynamic positioning via left, right, top, bottom inline styles
+ *   - Dynamic styling via style attribute (padding, background, color, etc.)
+ *   - Positioning classes: .center, .left, .right, .top, .bottom
+ *   - Combinations: .center.center, .left.center, .right.top, etc.
+ *
+ * Text styling properties can be applied:
+ *   - Via inline style: style="color: #fff; background: #000; padding: 10px;"
+ *   - Font weight and size are base defaults
+ * ============================================================================ */
+
+.bottom-text {
+  /* Position and layering */
+  position: absolute;
+  z-index: 35;
+
+  /* Typography - base defaults */
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  /* Display */
+  display: block;
+
+  /* Note: bottom, right, left, top applied via inline styles or classes */
+  /* Note: padding, background, color applied via inline styles only */
+}
+
+/* ---- Horizontal Positioning ---- */
+
+/* Center horizontally - applies translateX(-50%) transform */
+.bottom-text.center {
+  transform: translateX(-50%);
+}
+
+/* Left position - no transform needed */
+.bottom-text.left {
+  /* Positioned via inline style: left: value */
+  right: auto;
+}
+
+/* Right position - no transform needed */
+.bottom-text.right {
+  /* Positioned via inline style: right: value */
+  left: auto;
+}
+
+/* ---- Vertical Positioning ---- */
+
+/* Top position - no transform needed */
+.bottom-text.top {
+  /* Positioned via inline style: top: value */
+  bottom: auto;
+}
+
+/* Bottom position - no transform needed */
+.bottom-text.bottom {
+  /* Positioned via inline style: bottom: value */
+  top: auto;
+}
+
+/* ---- Combined Positioning ---- */
+
+/* Center horizontally with vertical positions */
+.bottom-text.center.top,
+.bottom-text.center.bottom {
+  transform: translateX(-50%);
+}
+
+/* Center vertically with horizontal positions */
+.bottom-text.left.center,
+.bottom-text.right.center {
+  transform: translateY(-50%);
+}
+
+/* Center both horizontally and vertically */
+.bottom-text.center.center {
+  transform: translate(-50%, -50%);
+}

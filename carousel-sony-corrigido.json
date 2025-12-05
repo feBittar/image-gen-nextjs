@@ -1,0 +1,516 @@
+{
+    "carousel": {
+        "photos": [
+            {
+                "photo": {
+                    "dim": {
+                        "width": 3816,
+                        "height": 5724
+                    },
+                    "id": 7550893,
+                    "photographer": "Hanna Pad",
+                    "alt": "Woman organizing wall planner in office showing strategy and planning.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/7550893/pexels-photo-7550893.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/7550893/pexels-photo-7550893.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 1
+            },
+            {
+                "photo": {
+                    "dim": {
+                        "width": 3646,
+                        "height": 5178
+                    },
+                    "id": 7552363,
+                    "photographer": "Hanna Pad",
+                    "alt": "Young woman using a tablet in a modern, minimalist workspace with pastel decor.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/7552363/pexels-photo-7552363.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/7552363/pexels-photo-7552363.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 2
+            },
+            {
+                "photo": {
+                    "dim": {
+                        "width": 4160,
+                        "height": 5881
+                    },
+                    "id": 7552373,
+                    "photographer": "Hanna Pad",
+                    "alt": "Designer sits on carpet with color palettes and samples, planning creative project.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/7552373/pexels-photo-7552373.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/7552373/pexels-photo-7552373.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 3
+            },
+            {
+                "photo": {
+                    "dim": {
+                        "width": 4050,
+                        "height": 6075
+                    },
+                    "id": 7552577,
+                    "photographer": "Hanna Pad",
+                    "alt": "Young African American woman smiling while holding cardboard boxes indoors.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/7552577/pexels-photo-7552577.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/7552577/pexels-photo-7552577.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 4
+            },
+            {
+                "photo": {
+                    "dim": {
+                        "width": 3341,
+                        "height": 5011
+                    },
+                    "id": 7552741,
+                    "photographer": "Hanna Pad",
+                    "alt": "Digital camera resting on a desk with color swatches and design materials.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/7552741/pexels-photo-7552741.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/7552741/pexels-photo-7552741.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 5
+            },
+            {
+                "photo": {
+                    "dim": {
+                        "width": 4000,
+                        "height": 6000
+                    },
+                    "id": 6592356,
+                    "photographer": "Mikhail Nilov",
+                    "alt": "Organized workspace featuring color swatches, notebook, laptop, and stationery for design projects.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/6592356/pexels-photo-6592356.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/6592356/pexels-photo-6592356.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 6
+            },
+            {
+                "photo": {
+                    "dim": {
+                        "width": 3781,
+                        "height": 5672
+                    },
+                    "id": 7552372,
+                    "photographer": "Hanna Pad",
+                    "alt": "Creative woman using a tablet for design planning in a modern, relaxed setting.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/7552372/pexels-photo-7552372.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/7552372/pexels-photo-7552372.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 7
+            },
+            {
+                "photo": {
+                    "dim": {
+                        "width": 4016,
+                        "height": 6024
+                    },
+                    "id": 7552313,
+                    "photographer": "Hanna Pad",
+                    "alt": "A confident young woman sitting among packages and papers while using a tablet, showcasing modern entrepreneurship.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/7552313/pexels-photo-7552313.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/7552313/pexels-photo-7552313.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 8
+            },
+            {
+                "photo": {
+                    "dim": {
+                        "width": 2078,
+                        "height": 3694
+                    },
+                    "id": 7552071,
+                    "photographer": "Hanna Pad",
+                    "alt": "A young woman enjoys a peaceful moment arranging flowers in a bright room.",
+                    "src": {
+                        "portrait": "https://images.pexels.com/photos/7552071/pexels-photo-7552071.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+                        "landscape": "https://images.pexels.com/photos/7552071/pexels-photo-7552071.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+                    }
+                },
+                "slide": 9
+            }
+        ],
+        "copy": {
+            "slides": [
+                {
+                    "numero": 1,
+                    "estilo": "stack-img-bg",
+                    "texto_1": "O FUNDADOR QUE DISSE NÃO AO DINHEIRO FÁCIL",
+                    "texto_principal": "texto_1"
+                },
+                {
+                    "numero": 2,
+                    "estilo": "stack-img",
+                    "texto_1": "Tóquio, 1946. Japão destruído, produtos locais vistos como cópias baratas e descartáveis no mundo inteiro.",
+                    "texto_2": "Akio Morita tinha 25 anos, um diploma de física e uma decisão simples. Fazer o mundo respeitar a qualidade japonesa."
+                },
+                {
+                    "numero": 3,
+                    "estilo": "stack-img-bg",
+                    "texto_1": "A Sony mal tinha capital quando a Bova chegou com uma proposta tentadora.",
+                    "texto_2": "Encomenda de 100.000 rádios. Volume que valia várias vezes o capital total. Mas com uma condição. Nada de marca Sony.",
+                    "texto_principal": "texto_2"
+                },
+                {
+                    "numero": 4,
+                    "estilo": "stack-img",
+                    "texto_1": "Era dinheiro praticamente garantido em um país quebrado.",
+                    "texto_2": "Morita recusou na hora. Explicou ao executivo que o nome Sony seria tão famoso quanto o da Bova.",
+                    "texto_3": "Preferiu quase quebrar a virar fábrica fantasma de outra marca."
+                },
+                {
+                    "numero": 5,
+                    "estilo": "stack-img-bg",
+                    "texto_1": "Anos depois, repetiu o padrão com o Walkman.",
+                    "texto_2": "Engenheiros chamaram de loucura vender toca-fitas sem gravação e sem alto-falante. Morita mandou tirar tudo para caber no bolso. Vendeu mais de 400 milhões de unidades.",
+                    "texto_principal": "texto_2"
+                },
+                {
+                    "numero": 6,
+                    "estilo": "stack-img-bg",
+                    "texto_1": "Enquanto todo mundo pedia pesquisa de mercado, Morita pedia responsabilidade pessoal.",
+                    "texto_2": "Pagava crítico interno como Nario Oga para destruir produtos ruins. Mudava gerentes quando o time fugia. Investia milhões em marketing mesmo com pressão por lucro trimestral.",
+                    "texto_principal": "texto_1"
+                },
+                {
+                    "numero": 7,
+                    "estilo": "stack-img-bg",
+                    "texto_1": "A lógica era sempre a mesma.",
+                    "texto_2": "Marca forte, produto excelente e cultura exigente antes do caixa confortável. Recusar dinheiro fácil hoje para não virar commodity sem nome amanhã. Construir vantagem que concorrente não copia em um ano.",
+                    "texto_principal": "texto_2"
+                },
+                {
+                    "numero": 8,
+                    "estilo": "stack-img-bg",
+                    "texto_1": "A pergunta é direta.",
+                    "texto_2": "Onde você está aceitando ser OEM moderno. Vendendo barato para terceiros, dependendo de intermediário, sacrificando marca, cortando marketing ou tolerando gerente fraco porque ele entrega número de curto prazo.",
+                    "texto_principal": "texto_2"
+                },
+                {
+                    "numero": 9,
+                    "estilo": "stack-img-bg",
+                    "texto_1": "Quer parar de trocar fôlego de caixa por futuro e montar uma empresa com marca respeitada e margem alta.",
+                    "texto_2": "Na imersão presencial ou online você aprofunda casos como Sony e traduz em decisões táticas para o seu negócio.",
+                    "texto_3": "Próximo passo está em entrar na imersão.",
+                    "texto_principal": "texto_3"
+                }
+            ]
+        },
+        "destaques": [
+            {
+                "numero": 1,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "NÃO AO DINHEIRO FÁCIL",
+                            "tipo": "bold+italic",
+                            "cor": true
+                        }
+                    ]
+                }
+            },
+            {
+                "numero": 2,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "cópias baratas e descartáveis",
+                            "tipo": "italic",
+                            "cor": false
+                        }
+                    ],
+                    "texto_2": [
+                        {
+                            "trecho": "decisão simples",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "Fazer o mundo respeitar a qualidade japonesa",
+                            "tipo": "bold",
+                            "cor": true
+                        }
+                    ]
+                }
+            },
+            {
+                "numero": 3,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "mal tinha capital",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "proposta tentadora",
+                            "tipo": "italic",
+                            "cor": false
+                        }
+                    ],
+                    "texto_2": [
+                        {
+                            "trecho": "Encomenda de 100.000 rádios",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "valia várias vezes o capital total",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "Nada de marca Sony",
+                            "tipo": "bold",
+                            "cor": true
+                        }
+                    ]
+                }
+            },
+            {
+                "numero": 4,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "dinheiro praticamente garantido",
+                            "tipo": "italic",
+                            "cor": false
+                        }
+                    ],
+                    "texto_2": [
+                        {
+                            "trecho": "Morita recusou na hora",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "nome Sony seria tão famoso quanto o da Bova",
+                            "tipo": "bold+italic",
+                            "cor": true
+                        }
+                    ],
+                    "texto_3": [
+                        {
+                            "trecho": "Preferiu quase quebrar",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "virar fábrica fantasma de outra marca",
+                            "tipo": "bold",
+                            "cor": false
+                        }
+                    ]
+                }
+            },
+            {
+                "numero": 5,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "repetiu o padrão",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "com o Walkman",
+                            "tipo": "italic",
+                            "cor": false
+                        }
+                    ],
+                    "texto_2": [
+                        {
+                            "trecho": "loucura vender toca-fitas sem gravação e sem alto-falante",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "tirar tudo para caber no bolso",
+                            "tipo": "bold+italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "Vendeu mais de 400 milhões de unidades",
+                            "tipo": "bold",
+                            "cor": true
+                        }
+                    ]
+                }
+            },
+            {
+                "numero": 6,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "todo mundo pedia pesquisa de mercado",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "Morita pedia responsabilidade pessoal",
+                            "tipo": "bold+italic",
+                            "cor": true
+                        }
+                    ],
+                    "texto_2": [
+                        {
+                            "trecho": "crítico interno como Nario Oga",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "destruir produtos ruins",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "Mudava gerentes quando o time fugia",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "Investia milhões em marketing mesmo com pressão por lucro trimestral",
+                            "tipo": "bold",
+                            "cor": false
+                        }
+                    ]
+                }
+            },
+            {
+                "numero": 7,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "A lógica era sempre a mesma",
+                            "tipo": "italic",
+                            "cor": false
+                        }
+                    ],
+                    "texto_2": [
+                        {
+                            "trecho": "Marca forte, produto excelente e cultura exigente",
+                            "tipo": "bold+italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "antes do caixa confortável",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "Recusar dinheiro fácil hoje",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "não virar commodity sem nome amanhã",
+                            "tipo": "bold",
+                            "cor": true
+                        },
+                        {
+                            "trecho": "vantagem que concorrente não copia em um ano",
+                            "tipo": "bold",
+                            "cor": false
+                        }
+                    ]
+                }
+            },
+            {
+                "numero": 8,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "pergunta é direta",
+                            "tipo": "italic",
+                            "cor": false
+                        }
+                    ],
+                    "texto_2": [
+                        {
+                            "trecho": "aceitando ser OEM moderno",
+                            "tipo": "bold+italic",
+                            "cor": true
+                        },
+                        {
+                            "trecho": "Vendendo barato para terceiros",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "dependendo de intermediário",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "sacrificando marca",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "cortando marketing",
+                            "tipo": "bold",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "tolerando gerente fraco porque ele entrega número de curto prazo",
+                            "tipo": "bold",
+                            "cor": false
+                        }
+                    ]
+                }
+            },
+            {
+                "numero": 9,
+                "destaques": {
+                    "texto_1": [
+                        {
+                            "trecho": "trocar fôlego de caixa por futuro",
+                            "tipo": "bold+italic",
+                            "cor": true
+                        },
+                        {
+                            "trecho": "marca respeitada e margem alta",
+                            "tipo": "bold",
+                            "cor": false
+                        }
+                    ],
+                    "texto_2": [
+                        {
+                            "trecho": "aprofundar casos como Sony",
+                            "tipo": "italic",
+                            "cor": false
+                        },
+                        {
+                            "trecho": "traduz em decisões táticas para o seu negócio",
+                            "tipo": "bold",
+                            "cor": false
+                        }
+                    ],
+                    "texto_3": [
+                        {
+                            "trecho": "Próximo passo está em entrar na imersão",
+                            "tipo": "bold",
+                            "cor": false
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

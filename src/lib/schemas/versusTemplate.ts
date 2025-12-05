@@ -1,0 +1,258 @@
+import { z } from 'zod';
+
+// Styled chunk schema
+const styledChunkSchema = z.object({
+  text: z.string(),
+  color: z.string().optional(),
+  fontFamily: z.string().optional(),
+  fontSize: z.string().optional(),
+  bold: z.boolean().optional(),
+  italic: z.boolean().optional(),
+  underline: z.boolean().optional(),
+  letterSpacing: z.string().optional(),
+  backgroundColor: z.string().optional(),
+  padding: z.string().optional(),
+});
+
+// Text style schema
+const textStyleSchema = z.object({
+  fontFamily: z.string().optional(),
+  fontSize: z.string().optional(),
+  fontWeight: z.string().optional(),
+  color: z.string().optional(),
+  backgroundColor: z.string().optional(),
+  textAlign: z.enum(['left', 'center', 'right']).optional(),
+  lineHeight: z.string().optional(),
+  letterSpacing: z.string().optional(),
+  textTransform: z.enum(['none', 'uppercase', 'lowercase', 'capitalize']).optional(),
+  textDecoration: z.string().optional(),
+  textShadow: z.string().optional(),
+  padding: z.string().optional(),
+});
+
+// Position schema
+const positionSchema = z.object({
+  top: z.union([z.string(), z.number()]).optional(),
+  left: z.union([z.string(), z.number()]).optional(),
+  width: z.union([z.string(), z.number()]).optional(),
+  height: z.union([z.string(), z.number()]).optional(),
+});
+
+// Special position enum
+const specialPositionEnum = z.enum(['none', 'top-left', 'top-right', 'bottom-left', 'bottom-right']);
+
+// Corner element schema (for each of the 4 corners)
+const cornerSchema = (cornerNum: number) => ({
+  [`corner${cornerNum}Type`]: z.enum(['svg', 'text', 'none']).optional(),
+  [`corner${cornerNum}Text`]: z.string().optional(),
+  [`corner${cornerNum}TextStyle`]: textStyleSchema.optional(),
+  [`corner${cornerNum}SvgContent`]: z.string().optional(),
+  [`corner${cornerNum}SvgUrl`]: z.string().optional(),
+  [`corner${cornerNum}SvgColor`]: z.string().optional(),
+  [`corner${cornerNum}Position`]: positionSchema.optional(),
+  [`corner${cornerNum}SpecialPosition`]: specialPositionEnum.optional(),
+  [`corner${cornerNum}SpecialPadding`]: z.number().optional(),
+});
+
+// Versus template schema
+export const versusTemplateSchema = z.object({
+  template: z.string(),
+
+  // === VIEWPORT/BACKGROUND ===
+  viewportBackgroundType: z.enum(['color', 'image']).default('color'),
+  viewportBackgroundColor: z.string().optional(),
+  viewportBackgroundImage: z.string().optional(),
+
+  // === CONTAINER ===
+  containerPaddingTop: z.number().optional(),
+  containerPaddingRight: z.number().optional(),
+  containerPaddingBottom: z.number().optional(),
+  containerPaddingLeft: z.number().optional(),
+  contentGap: z.number().optional(),
+
+  // === TEXT 1 (Title) ===
+  text1: z.string().optional(),
+  text1StyledChunks: z.array(styledChunkSchema).optional(),
+  text1Style: textStyleSchema.optional(),
+
+  // === TEXT 2 (Explanatory) ===
+  text2: z.string().optional(),
+  text2StyledChunks: z.array(styledChunkSchema).optional(),
+  text2Style: textStyleSchema.optional(),
+
+  // === COMPARISON IMAGES ===
+  imageLeftUrl: z.string().optional(),
+  imageRightUrl: z.string().optional(),
+  imageGap: z.number().optional(),
+  imageBorderRadius: z.number().optional(),
+
+  // === CORNER 1 (top-left) ===
+  corner1Type: z.enum(['svg', 'text', 'none']).optional(),
+  corner1Text: z.string().optional(),
+  corner1TextStyle: textStyleSchema.optional(),
+  corner1BackgroundEnabled: z.boolean().optional(),
+  corner1SvgContent: z.string().optional(),
+  corner1SvgUrl: z.string().optional(),
+  corner1SvgColor: z.string().optional(),
+  corner1SvgWidth: z.string().optional(),
+  corner1SvgHeight: z.string().optional(),
+  corner1Position: positionSchema.optional(),
+  corner1SpecialPosition: specialPositionEnum.optional(),
+  corner1PaddingX: z.number().optional(), // Horizontal padding in pixels (left/right)
+  corner1PaddingY: z.number().optional(), // Vertical padding in pixels (top/bottom)
+
+  // === CORNER 2 (top-right) ===
+  corner2Type: z.enum(['svg', 'text', 'none']).optional(),
+  corner2Text: z.string().optional(),
+  corner2TextStyle: textStyleSchema.optional(),
+  corner2BackgroundEnabled: z.boolean().optional(),
+  corner2SvgContent: z.string().optional(),
+  corner2SvgUrl: z.string().optional(),
+  corner2SvgColor: z.string().optional(),
+  corner2SvgWidth: z.string().optional(),
+  corner2SvgHeight: z.string().optional(),
+  corner2Position: positionSchema.optional(),
+  corner2SpecialPosition: specialPositionEnum.optional(),
+  corner2PaddingX: z.number().optional(), // Horizontal padding in pixels (left/right)
+  corner2PaddingY: z.number().optional(), // Vertical padding in pixels (top/bottom)
+
+  // === CORNER 3 (bottom-left) ===
+  corner3Type: z.enum(['svg', 'text', 'none']).optional(),
+  corner3Text: z.string().optional(),
+  corner3TextStyle: textStyleSchema.optional(),
+  corner3BackgroundEnabled: z.boolean().optional(),
+  corner3SvgContent: z.string().optional(),
+  corner3SvgUrl: z.string().optional(),
+  corner3SvgColor: z.string().optional(),
+  corner3SvgWidth: z.string().optional(),
+  corner3SvgHeight: z.string().optional(),
+  corner3Position: positionSchema.optional(),
+  corner3SpecialPosition: specialPositionEnum.optional(),
+  corner3PaddingX: z.number().optional(), // Horizontal padding in pixels (left/right)
+  corner3PaddingY: z.number().optional(), // Vertical padding in pixels (top/bottom)
+
+  // === CORNER 4 (bottom-right) ===
+  corner4Type: z.enum(['svg', 'text', 'none']).optional(),
+  corner4Text: z.string().optional(),
+  corner4TextStyle: textStyleSchema.optional(),
+  corner4BackgroundEnabled: z.boolean().optional(),
+  corner4SvgContent: z.string().optional(),
+  corner4SvgUrl: z.string().optional(),
+  corner4SvgColor: z.string().optional(),
+  corner4SvgWidth: z.string().optional(),
+  corner4SvgHeight: z.string().optional(),
+  corner4Position: positionSchema.optional(),
+  corner4SpecialPosition: specialPositionEnum.optional(),
+  corner4PaddingX: z.number().optional(), // Horizontal padding in pixels (left/right)
+  corner4PaddingY: z.number().optional(), // Vertical padding in pixels (top/bottom)
+});
+
+export type VersusTemplateFormData = z.infer<typeof versusTemplateSchema>;
+
+// Default values
+export const versusTemplateDefaults: VersusTemplateFormData = {
+  template: 'versus',
+
+  // Viewport
+  viewportBackgroundType: 'color',
+  viewportBackgroundColor: '#FFFFFF',
+
+  // Container
+  containerPaddingTop: 100,
+  containerPaddingRight: 80,
+  containerPaddingBottom: 100,
+  containerPaddingLeft: 80,
+  contentGap: 40,
+
+  // Text 1 (Title)
+  text1: 'Título Comparação',
+  text1Style: {
+    fontFamily: 'Arial Black',
+    fontSize: '80px',
+    fontWeight: '900',
+    color: '#333333',
+    textAlign: 'center',
+    lineHeight: '1.1',
+  },
+
+  // Text 2 (Explanatory)
+  text2: 'Texto Explicativo',
+  text2Style: {
+    fontFamily: 'Arial Black',
+    fontSize: '60px',
+    fontWeight: '900',
+    color: '#333333',
+    textAlign: 'center',
+    lineHeight: '1.2',
+  },
+
+  // Comparison Images
+  imageLeftUrl: '',
+  imageRightUrl: '',
+  imageGap: 40,
+  imageBorderRadius: 0,
+
+  // Corner 1 (top-left)
+  corner1Type: 'text',
+  corner1Text: 'tag',
+  corner1TextStyle: {
+    fontFamily: 'Arial Black',
+    fontSize: '32px',
+    fontWeight: '900',
+    color: '#000000',
+    backgroundColor: '#ff00cc',
+    padding: '5px 15px',
+  },
+  corner1BackgroundEnabled: false,
+  corner1SpecialPosition: 'top-left',
+  corner1PaddingX: 40, // Horizontal padding (left) in pixels
+  corner1PaddingY: 40, // Vertical padding (top) in pixels
+
+  // Corner 2 (top-right)
+  corner2Type: 'text',
+  corner2Text: 'tag',
+  corner2TextStyle: {
+    fontFamily: 'Arial Black',
+    fontSize: '32px',
+    fontWeight: '900',
+    color: '#000000',
+    backgroundColor: '#ff00cc',
+    padding: '5px 15px',
+  },
+  corner2BackgroundEnabled: false,
+  corner2SpecialPosition: 'top-right',
+  corner2PaddingX: 40, // Horizontal padding (right) in pixels
+  corner2PaddingY: 40, // Vertical padding (top) in pixels
+
+  // Corner 3 (bottom-left)
+  corner3Type: 'text',
+  corner3Text: 'tag',
+  corner3TextStyle: {
+    fontFamily: 'Arial Black',
+    fontSize: '32px',
+    fontWeight: '900',
+    color: '#000000',
+    backgroundColor: '#ff00cc',
+    padding: '5px 15px',
+  },
+  corner3BackgroundEnabled: false,
+  corner3SpecialPosition: 'bottom-left',
+  corner3PaddingX: 40, // Horizontal padding (left) in pixels
+  corner3PaddingY: 40, // Vertical padding (bottom) in pixels
+
+  // Corner 4 (bottom-right)
+  corner4Type: 'text',
+  corner4Text: 'tag',
+  corner4TextStyle: {
+    fontFamily: 'Arial Black',
+    fontSize: '32px',
+    fontWeight: '900',
+    color: '#000000',
+    backgroundColor: '#ff00cc',
+    padding: '5px 15px',
+  },
+  corner4BackgroundEnabled: false,
+  corner4SpecialPosition: 'bottom-right',
+  corner4PaddingX: 40, // Horizontal padding (right) in pixels
+  corner4PaddingY: 40, // Vertical padding (bottom) in pixels
+};

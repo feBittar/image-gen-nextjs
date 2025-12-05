@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width={{viewportWidth}}, height={{viewportHeight}}">
+  <title>Generated Image</title>
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="{{baseUrl}}/css/base/reset.css">
+  <link rel="stylesheet" href="{{baseUrl}}/css/modules/fonts.css">
+
+  <!-- Module CSS (injected dynamically) -->
+  <style>
+    /* CSS Variables */
+    :root {
+      {{styleVariables}}
+    }
+
+    /* Base body styles */
+    body {
+      width: {{viewportWidth}}px;
+      height: {{viewportHeight}}px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Module styles */
+    {{modulesCSS}}
+  </style>
+</head>
+<body>
+  <!-- Module HTML (injected dynamically in z-index order) -->
+  {{modulesHTML}}
+
+  <!-- Global scripts -->
+  <script src="{{baseUrl}}/js/global-elements.js"></script>
+
+  <!-- Font loading detection -->
+  <script>
+    // Ensure fonts are loaded before screenshot
+    document.fonts.ready.then(function() {
+      document.body.classList.add('fonts-loaded');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "carousel": {
+    "copy": {
+      "slides": [
+        {
+          "numero": 3,
+          "estilo": "stack-img-bg",
+          "texto_1": "Com Pedro Franceschi, cria o Pagar.me, a 'Stripe do Brasil'.",
+          "texto_2": "Eles resolvem um inferno fiscal: dividir transações para marketplaces pagarem imposto só sobre a própria receita, não sobre todo o GMV.",
+          "texto_3": "O volume chega a US$ 1,5 bilhão transacionado e a Stone compra o negócio por cerca de 5 vezes o lucro.",
+          "texto_principal": "texto_2"
+        }
+      ]
+    },
+    "destaques": [
+      {
+        "numero": 3,
+        "destaques": {
+          "texto_2": [
+            {
+              "trecho": "inferno fiscal",
+              "tipo": "bold",
+              "cor": false
+            }
+          ],
+          "texto_3": [
+            {
+              "trecho": "US$ 1,5 bilhão",
+              "tipo": "bold+italic",
+              "cor": true
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

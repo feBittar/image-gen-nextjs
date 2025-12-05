@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1440">
+  <title>Versus Template</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 1080px;
+      height: 1440px;
+      background-color: {{viewportBackgroundColor}};
+      background-image: {{viewportBackgroundImage}};
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial Black', 'Arial', sans-serif;
+      position: relative;
+      {{styleVariables}}
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      padding: var(--container-padding-top, 100px)
+               var(--container-padding-right, 80px)
+               var(--container-padding-bottom, 100px)
+               var(--container-padding-left, 80px);
+    }
+
+    .content-layer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--content-gap, 40px);
+    }
+
+    .title-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: fit-content;
+    }
+
+    .comparison-row {
+      flex: 1;
+      display: flex;
+      gap: var(--image-gap, 40px);
+      min-height: 0;
+    }
+
+    .comparison-image {
+      flex: 1;
+      border-radius: var(--image-border-radius, 0px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .comparison-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: fit-content;
+    }
+
+    /* === CORNERS OVERLAY === */
+    .overlay-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1440px;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    .corner {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .corner-1 {
+      top: var(--corner1-top, 40px);
+      left: var(--corner1-left, 40px);
+    }
+
+    .corner-2 {
+      top: var(--corner2-top, 40px);
+      right: var(--corner2-right, 40px);
+    }
+
+    .corner-3 {
+      bottom: var(--corner3-bottom, 40px);
+      left: var(--corner3-left, 40px);
+    }
+
+    .corner-4 {
+      bottom: var(--corner4-bottom, 40px);
+      right: var(--corner4-right, 40px);
+    }
+
+    .corner svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .corner-1 svg * { fill: var(--corner1-svg-color, currentColor) !important; }
+    .corner-2 svg * { fill: var(--corner2-svg-color, currentColor) !important; }
+    .corner-3 svg * { fill: var(--corner3-svg-color, currentColor) !important; }
+    .corner-4 svg * { fill: var(--corner4-svg-color, currentColor) !important; }
+
+    .corner img {
+      width: var(--corner-svg-width, 60px);
+      height: var(--corner-svg-height, 60px);
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content-layer">
+      <div class="title-box">{{text1}}</div>
+
+      <div class="comparison-row">
+        <div class="comparison-image">
+          <img src="{{imageLeftUrl}}" alt="Comparacao 1" />
+        </div>
+        <div class="comparison-image">
+          <img src="{{imageRightUrl}}" alt="Comparacao 2" />
+        </div>
+      </div>
+
+      <div class="footer-box">{{text2}}</div>
+    </div>
+  </div>
+
+  <div class="overlay-layer">
+    <div class="corner corner-1">{{{corner1Content}}}</div>
+    <div class="corner corner-2">{{{corner2Content}}}</div>
+    <div class="corner corner-3">{{{corner3Content}}}</div>
+    <div class="corner corner-4">{{{corner4Content}}}</div>
+  </div>
+</body>
+</html>

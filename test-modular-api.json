@@ -1,0 +1,88 @@
+{
+  "enabledModules": ["viewport", "card", "textFields"],
+  "moduleData": {
+    "viewport": {
+      "backgroundType": "color",
+      "backgroundColor": "#1a1a2e",
+      "blurEnabled": false,
+      "gradientOverlay": {
+        "enabled": false
+      }
+    },
+    "card": {
+      "enabled": true,
+      "width": 85,
+      "height": 85,
+      "borderRadius": 20,
+      "backgroundType": "color",
+      "backgroundColor": "#16213e",
+      "padding": {
+        "top": 60,
+        "right": 60,
+        "bottom": 60,
+        "left": 60
+      },
+      "gradientOverlay": {
+        "enabled": false
+      },
+      "shadow": {
+        "enabled": true,
+        "color": "rgba(0, 0, 0, 0.3)",
+        "x": 0,
+        "y": 10,
+        "blur": 30,
+        "spread": 0
+      }
+    },
+    "textFields": {
+      "count": 3,
+      "gap": 30,
+      "verticalAlign": "center",
+      "fields": [
+        {
+          "content": "MODULAR SYSTEM",
+          "style": {
+            "fontFamily": "Arial",
+            "fontSize": "72px",
+            "fontWeight": "900",
+            "color": "#e94560",
+            "textAlign": "center",
+            "textTransform": "uppercase"
+          },
+          "styledChunks": [],
+          "verticalOffset": 0
+        },
+        {
+          "content": "Composable Template Engine",
+          "style": {
+            "fontFamily": "Arial",
+            "fontSize": "32px",
+            "fontWeight": "400",
+            "color": "#0f3460",
+            "textAlign": "center",
+            "textTransform": "none"
+          },
+          "styledChunks": [],
+          "verticalOffset": 0
+        },
+        {
+          "content": "Build beautiful graphics from modules",
+          "style": {
+            "fontFamily": "Arial",
+            "fontSize": "20px",
+            "fontWeight": "300",
+            "color": "#533483",
+            "textAlign": "center",
+            "textTransform": "none"
+          },
+          "styledChunks": [],
+          "verticalOffset": 0
+        }
+      ]
+    }
+  },
+  "outputOptions": {
+    "format": "png",
+    "quality": 100
+  }
+}
