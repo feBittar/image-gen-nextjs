@@ -40,5 +40,30 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 nul
+
 # generated outputs
 /public/outputs/
+
+# test files
+test*.json
+test*.html
+test*.js
+test*.ts
+test*.bat
+test*.sh
+*.bat
+*.sh
+response-test.json
+
+# example/carousel data files
+carousel-*.json
+ff_*.json
+versus*.json
+
+# debug and investigation files
+*DEBUG*.md
+*INVESTIGATION*.md
+*CHECKLIST*.md
+*SUMMARY*.md
+*GUIDE*.md
+*QUICKSTART*.md
